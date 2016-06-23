@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>test</title>
+<script src="../artDialog.source.js?skin=default"></script>
+<script src="../plugins/iframeTools.source.js"></script>
+</head>
+
+<body style="margin:0">
+<div style="padding:20px;">
+<div style="margin:4px 0; padding:5px; background:#EEF7F5; text-align:left; color:#000; border-radius:3px; border:1px solid #D7EAE2; " class="tips">我是iframe页面：<a href="iframeB.html" target="_blank">iframeB.html</a></div>
+<input style="width:15em; padding:4px" id="bInput" value=""> <button id="aButton">返回数据给A页面</button> <a id="reload" href="#">刷新A页面</a>
+</div>
+<script>
+document.getElementById('bInput').value = art.dialog.data('aValue');// 读取A页面的数据
+
+// 返回数据给A页面
+document.getElementById('aButton').onclick = function () {
+	var bValue = document.getElementById('bInput').value;
+	art.dialog.data('bValue', bValue);// 存储数据
+	art.dialog.close();
+};
+
+// 刷新A页面
+document.getElementById('reload').onclick = function () {
+	var win = art.dialog.open.origin;
+	win.location.reload(); // 注意：如果父页面重载或者关闭其子对话框全部会关闭
+	return false;
+};
+</script>
+</body>
+</html>

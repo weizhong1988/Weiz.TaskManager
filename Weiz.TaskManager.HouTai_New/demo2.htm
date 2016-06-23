@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>模板管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" href="/Content/Css/mlg_admin.css" rel="Stylesheet" />
+    <link href="/Content/Scripts/artDialog/_doc/demo.css" rel="stylesheet" type="text/css" />
+    <!--弹出窗口css-->
+    <link href="/Content/Scripts/artDialog/skins/default.css" />
+    <!--弹出窗口css-->
+    <script type="text/javascript" src="/Content/scripts/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/common.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/My97DatePicker/WdatePicker.js"></script>
+    <!--弹出窗口js-->
+    <script type="text/javascript" src="/Content/Scripts/jsScroll.js"></script>
+    <!--下拉滚动条-->
+    <script type="text/javascript" src="Content/Scripts/artDialog.js"></script>
+</head>
+<body>
+    <div id="testdiv" class="none">安全退出安全退出安全退出安全退出安全退出安全退出</div>
+    <div class="header">
+        <div class="f_l"><a href="#">
+            <img src="/Content/Images/logo.png" alt="" /></a></div>
+        <div class="top_account"><i class="inline account_icon"></i>13800138000  &nbsp; <a href="#">安全退出</a></div>
+    </div>
+    <div class="main_bg">
+        <div class="menu_new">
+            <div class="menuin">
+                <div class="left_menu_box">
+                    <h3>材料信息管理</h3>
+                    <ul class="block">
+                        <li><a href="#">材料上传</a></li>
+                        <li><a href="#">材料管理</a></li>
+                        <li><a href="#">贴图图库管理</a></li>
+                    </ul>
+                    <h3>商品信息管理</h3>
+                    <ul class="none">
+                        <li><a href="#" class="a_checked">主模型商品管理</a></li>
+                        <li><a href="#">拼插式商品管理</a></li>
+                        <li><a href="#">无模型商品管理</a></li>
+                        <li><a href="#">商品样例管理</a></li>
+                    </ul>
+                    <h3>订单管理</h3>
+                    <ul class="none">
+                        <li><a href="#">订单管理</a></li>
+                        <li><a href="#">退货管理</a></li>
+                    </ul>
+                    <h3>商家管理</h3>
+                    <ul class="none">
+                        <li><a href="#">商家基本信息管理</a></li>
+                        <li><a href="#">配送公司管理</a></li>
+                        <li><a href="#">申请入驻管理</a></li>
+                        <li><a href="#">配送范围设置</a></li>
+                        <li><a href="#">配送范围查看</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menuHidden1">
+                <span class="inline"></span>
+            </div>
+            <div class="menuHidden2">
+                <span class="inline"></span>
+            </div>
+        </div>
+        <div class="rightout_new">
+            <div class="rightin_new">
+                <div class="bread_crumbs">当前页面：<a href="#">模板管理</a> > <a href="#">模板列表</a></div>
+                <div class="pd20">
+                    <div class="sub_title"><a href="#" class="btncom btn_bg1 w100 inline f_r" onclick="test1();">新增模板</a>模板查询 </div>
+                    <div class="inp_tablebox mg_t10">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <th width="15%">模板名称：</th>
+                                <td width="35%">
+                                    <input type="" value="" name="text" class="inpcom w180" /></td>
+                                <th width="15%">模板规格：</th>
+                                <td width="35%">
+                                    <input type="" value="" name="text" class="inpcom w180 Wdate" onclick="WdatePicker()" /></td>
+                            </tr>
+                            <tr>
+                                <th>模板编号：</th>
+                                <td>
+                                    <textarea class="textareacom w220"></textarea></td>
+                                <th>状态：</th>
+                                <td>
+                                    <div class="definedSelect inline">
+                                        <span class="checked_text inline">请选择</span>
+                                        <ul id="select1" class="selectbox none">
+                                            <li>男衬衫</li>
+                                            <li>女衬衫</li>
+                                            <li>儿童装</li>
+                                            <li>老年人鞋</li>
+                                            <li>测试衣服</li>
+                                            <li>裤子</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td colspan="3"><a href="#" class="btncom w120 btn_bg2 inline"><span>查 询</span></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="sub_title mg_t20">模板列表</div>
+                    <ul class="adminTab clearfix mg_t20">
+                        <li>基本信息</li>
+                        <li>收款账户</li>
+                        <li>头像设置</li>
+                        <li class="checked">收货地址</li>
+                        <li>修改密码</li>
+                    </ul>
+                    <div class="list_tablebox mg_t10">
+                        <table cellpadding="0" cellspacing="1" border="0">
+                            <tr>
+                                <th width="8%">模板ID</th>
+                                <th width="20%">模板名称</th>
+                                <th width="8%">模板编号</th>
+                                <th width="8%">模板规格</th>
+                                <th width="8%">模板页数</th>
+                                <th width="8%">价格</th>
+                                <th width="9%">创建日期</th>
+                                <th width="6%">状态</th>
+                                <th width="25%">操作</th>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="pagination">
+                            <ul class="pages">
+                                <li class="pgNext pgEmpty">首页</li>
+                                <li class="pgNext pgEmpty">上页</li>
+                                <li class="pgNext pgEmpty">下页</li>
+                                <li class="pgNext pgEmpty">尾页</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub_title mg_t20">模板列表</div>
+                    <div class="list_tablebox mg_t10">
+                        <table cellpadding="0" cellspacing="1" border="0">
+                            <tr>
+                                <th width="8%">模板ID</th>
+                                <th width="20%">模板名称</th>
+                                <th width="8%">模板编号</th>
+                                <th width="8%">模板规格</th>
+                                <th width="8%">模板页数</th>
+                                <th width="8%">价格</th>
+                                <th width="9%">创建日期</th>
+                                <th width="6%">状态</th>
+                                <th width="25%">操作</th>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123131</td>
+                                <td>最炫名族风</td>
+                                <td>BAD1232</td>
+                                <td>13寸</td>
+                                <td>20P</td>
+                                <td>888.00元</td>
+                                <td>2013-9-30</td>
+                                <td>上架</td>
+                                <td>
+                                    <a href="#">编辑模板</a> &nbsp; 
+                                <a href="#">下架</a> &nbsp; 
+                                <a href="#">编辑设计样例</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

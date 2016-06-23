@@ -1,0 +1,14 @@
+﻿<Tasks>
+  <Task>
+    <TaskID>5FBAA648-D1E8-E511-B79D-54EE75868DB8</TaskID>
+    <TaskName>测试任务,输出当前时间</TaskName>
+    <TaskParam></TaskParam>
+    <!--运行频率设置 每30分钟运行一次-->
+    <CronExpressionString>* */30 * * * ?</CronExpressionString>
+    <AssemblyName>Weiz.TaskManager.TaskSet</AssemblyName>
+    <ClassName>Weiz.TaskManager.TaskSet.TestJob</ClassName>
+    <Status>1</Status>
+    <CreatedTime>2016-01-01 13:00:00</CreatedTime>
+    <CronRemark>每10秒运行一次</CronRemark>
+  </Task>
+</Tasks>

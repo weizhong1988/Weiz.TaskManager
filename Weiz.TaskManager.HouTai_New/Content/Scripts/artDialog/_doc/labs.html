@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>artDialog</title>
+<script>
+// skin demo
+(function() {
+	var _skin, _jQuery;
+	var _search = window.location.search;
+	if (_search) {
+		_skin = _search.split('demoSkin=')[1];
+		_jQuery = _search.indexOf('jQuery=true') !== -1;
+		if (_jQuery) document.write('<scr'+'ipt src="../jquery-1.6.2.min.js"></sc'+'ript>');
+	};
+	
+	document.write('<scr'+'ipt src="../artDialog.source.js?skin=' + (_skin || 'default') +'"></sc'+'ript>');
+	window._isDemoSkin = !!_skin;
+})();
+</script>
+
+<script src="demo.js"></script>
+<script src="highlight/highlight.pack.js"></script>
+<script src="highlight/languages/javascript.js"></script>
+<script>
+hljs.tabReplace = '    ';
+hljs.initHighlightingOnLoad();
+</script>
+<link href="demo.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/magula.css" />
+</head>
+
+<body>
+<div id="doc">
+  <div id="header">
+    <h1 id="logo"><a href="../index.html">artDialog</a></h1>
+    <ul id="nav" class="nav">
+      <li><a href="../index.html" class="home">首页</a></li>
+      <li><a href="./API.html" class="api">文档</a></li>
+      <li><a href="./down.html" class="down">下载</a></li>
+      <li><a href="./log.html" class="log">更新</a></li>
+      <li><a href="./labs.html" class="labs">实验</a></li>
+      <li><a href="./license.html" class="license">授权</a></li>
+      |
+      <li><a href="#" id="nav-skin">皮肤</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <h2>实验</h2>
+    <div class="tips" style="margin:4px 0; margin-bottom:20px; padding:5px; background:#EEF7F5; text-align:left; color:#000; border-radius:3px; border:1px solid #D7EAE2; ">这里是一些实验性的扩展，或许它们哪天消失也说不定。要注意：它们并没有整合在artDialog主文件里面。</div>
+    <h3>摇头效果</h3>
+    <p>类似与wordpress登录失败后登录框可爱的左右晃动效果</p>
+    <div id="demoCode_shake">
+      <pre><code class="javascript">// 2011-07-17 更新
+artDialog.fn.shake = function (){
+	var style = this.DOM.wrap[0].style,
+		p = [4, 8, 4, 0, -4, -8, -4, 0],
+		fx = function () {
+			style.marginLeft = p.shift() + 'px';
+			if (p.length <= 0) {
+				style.marginLeft = 0;
+				clearInterval(timerId);
+			};
+		};
+	p = p.concat(p.concat(p));
+	timerId = setInterval(fx, 13);
+	return this;
+};</code></pre>
+    </div>
+    <script>$('#demoCode_shake').runCode();</script>
+    <p>调用示例：</p>
+    <div id="demoCode_shake_use">
+      <pre><code class="javascript">var dialog = art.dialog({
+    content: '&lt;p&gt;"己所不欲"下一句是？&lt;/p&gt;'
+    	+ '&lt;input id="demo-labs-input" style="width:15em; padding:4px" /&gt;',
+    fixed: true,
+    id: 'Fm7',
+    icon: 'question',
+    okVal: '回答',
+    ok: function () {
+    	var input = document.getElementById('demo-labs-input');
+        
+    	if (input.value !== '\u52ff\u65bd\u4e8e\u4eba') {
+            this.shake && this.shake();// 调用抖动接口
+            input.select();
+            input.focus();
+            return false;
+        } else {
+            art.dialog({
+            	content: '恭喜你，回答正确！',
+                icon: 'succeed',
+                fixed: true,
+                lock: true,
+                time: 1.5
+            });
+        };
+    },
+    cancel: true
+});
+
+dialog.shake && dialog.shake();// 调用抖动接口
+</code></pre>
+    </div>
+    <p class="buttons">
+      <button class="runCode" name="demoCode_shake_use">运行&raquo;</button>
+    </p>
+    <h3>右下角滑动通知</h3>
+    <div id="demoCode_notice">
+      <pre><code class="javascript">artDialog.notice = function (options) {
+	var opt = options || {},
+		api, aConfig, hide, wrap, top,
+		duration = 800;
+		
+	var config = {
+		id: 'Notice',
+		left: '100%',
+		top: '100%',
+		fixed: true,
+		drag: false,
+		resize: false,
+		follow: null,
+		lock: false,
+		init: function(here){
+			api = this;
+			aConfig = api.config;
+			wrap = api.DOM.wrap;
+			top = parseInt(wrap[0].style.top);
+			hide = top + wrap[0].offsetHeight;
+			
+			wrap.css('top', hide + 'px')
+				.animate({top: top + 'px'}, duration, function () {
+					opt.init && opt.init.call(api, here);
+				});
+		},
+		close: function(here){
+			wrap.animate({top: hide + 'px'}, duration, function () {
+				opt.close && opt.close.call(this, here);
+				aConfig.close = $.noop;
+				api.close();
+			});
+			
+			return false;
+		}
+	};	
+	
+	for (var i in opt) {
+		if (config[i] === undefined) config[i] = opt[i];
+	};
+	
+	return artDialog(config);
+};</code></pre>
+    </div>
+    <script>$('#demoCode_notice').runCode();</script>
+    <p>调用示例：</p>
+    <div id="demoCode_notice_run">
+      <pre><code class="javascript">art.dialog.notice({
+	title: '万象网管',
+    width: 220,// 必须指定一个像素宽度值或者百分比，否则浏览器窗口改变可能导致artDialog收缩
+    content: '尊敬的顾客朋友，您IQ卡余额不足10元，请及时充值',
+    icon: 'face-sad',
+    time: 5
+});
+</code></pre>
+    </div>
+    <p class="buttons">
+      <button class="runCode" name="demoCode_notice_run">运行&raquo;</button>
+    </p>
+ 
+ 
+ 
+    <h3>简单交互对话框</h3>
+    <p>注意：artDialog iframeTools扩展已经包含这些扩展了</p>
+    <div id="demoCode_dialogs">
+      <pre><code class="javascript">/**
+ * 警告
+ * @param	{String}	消息内容
+ */
+artDialog.alert = function (content, callback) {
+	return artDialog({
+		id: 'Alert',
+		icon: 'warning',
+		fixed: true,
+		lock: true,
+		content: content,
+		ok: true,
+		close: callback
+	});
+};
+
+
+/**
+ * 确认
+ * @param	{String}	消息内容
+ * @param	{Function}	确定按钮回调函数
+ * @param	{Function}	取消按钮回调函数
+ */
+artDialog.confirm = function (content, yes, no) {
+	return artDialog({
+		id: 'Confirm',
+		icon: 'question',
+		fixed: true,
+		lock: true,
+		opacity: .1,
+		content: content,
+		ok: function (here) {
+			return yes.call(this, here);
+		},
+		cancel: function (here) {
+			return no && no.call(this, here);
+		}
+	});
+};
+
+
+/**
+ * 提问
+ * @param	{String}	提问内容
+ * @param	{Function}	回调函数. 接收参数：输入值
+ * @param	{String}	默认值
+ */
+artDialog.prompt = function (content, yes, value) {
+	value = value || '';
+	var input;
+	
+	return artDialog({
+		id: 'Prompt',
+		icon: 'question',
+		fixed: true,
+		lock: true,
+		opacity: .1,
+		content: [
+			'&lt;div style="margin-bottom:5px;font-size:12px"&gt;',
+				content,
+			'&lt;/div&gt;',
+			'&lt;div&gt;',
+				'&lt;input value="',
+					value,
+				'" style="width:18em;padding:6px 4px" /&gt;',
+			'&lt;/div&gt;'
+			].join(''),
+		init: function () {
+			input = this.DOM.content.find('input')[0];
+			input.select();
+			input.focus();
+		},
+		ok: function (here) {
+			return yes && yes.call(this, input.value, here);
+		},
+		cancel: true
+	});
+};
+
+
+/**
+ * 短暂提示
+ * @param	{String}	提示内容
+ * @param	{Number}	显示时间 (默认1.5秒)
+ */
+artDialog.tips = function (content, time) {
+	return artDialog({
+		id: 'Tips',
+		title: false,
+        cancel: false,
+		fixed: true,
+		lock: true
+	})
+    .content('&lt;div style="padding: 0 1em;"&gt;' + content + '&lt;/div&gt;')
+	.time(time || 1);
+};</code></pre>
+    </div>
+    <script>$('#demoCode_dialogs').runCode();</script>
+    
+    <p>调用范例：</p>
+    <div id="demoCode_dialogs_alert">
+      <pre><code class="javascript">art.dialog.alert('人品越来越不那么稳定了，请检查！');
+</code></pre>
+    </div>
+    <p class="buttons">
+      <button class="runCode" name="demoCode_dialogs_alert">运行&raquo;</button>
+    </p>
+    
+    
+    <div id="demoCode_dialogs_confirm">
+      <pre><code class="javascript">art.dialog.confirm('你确定要删除这掉消息吗？', function () {
+	art.dialog.tips('执行确定操作');
+}, function () {
+	art.dialog.tips('执行取消操作');
+});
+</code></pre>
+    </div>
+    <p class="buttons">
+      <button class="runCode" name="demoCode_dialogs_confirm">运行&raquo;</button>
+    </p>
+    
+    <div id="demoCode_dialogs_prompt">
+      <pre><code class="javascript">art.dialog.prompt('请输入图片网址', function (val) {
+	art.dialog.tips(val);
+}, 'http://');
+</code></pre>
+    </div>
+    <p class="buttons">
+      <button class="runCode" name="demoCode_dialogs_prompt">运行&raquo;</button>
+    </p>
+    
+    <div id="demoCode_dialogs_tips">
+      <pre><code class="javascript">art.dialog.tips('数据正在提交..', 2);
+// [more code..]
+art.dialog.tips('成功！已经保存在服务器');
+</code></pre>
+    </div>
+    <p class="buttons">
+      <button class="runCode" name="demoCode_dialogs_tips">运行&raquo;</button>
+    </p>
+    
+  </div>
+  <div id="footer"></div>
+</div>
+<script>_isDemoSkin && window._demoSkin && _demoSkin();</script>
+</body>
+
+</html>

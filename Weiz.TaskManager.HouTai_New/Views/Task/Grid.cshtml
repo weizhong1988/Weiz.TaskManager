@@ -1,0 +1,71 @@
+﻿@using Weiz.TaskManager.Models;
+@model PageOf<TaskModel>
+
+<div class="breadclip">
+    <i class="homeIcon inline"></i><a href="#">首页</a><a href="#">任务管理</a>任务管理
+</div>
+<div class="pd20" id="content">
+    <div class="sub_title mg_t20">
+        <div class="inline f_l">任务列表</div>
+        <a href="javascript:void(0)" class="btncom btn_bg2 w100 inline f_r add"  style="color: white; margin-right: 20px;">添加</a>
+    </div>
+    <div class="list_tablebox mg_t10">
+        <table cellpadding="0" cellspacing="1" border="0">
+            <tr>
+                <th width="15%">ID</th>
+                <th width="15%">任务名称</th>
+                <th width="15%">运行频率</th>
+                <th width="5%">任务状态</th>
+                <th width="8%">最近运行时间</th>
+                <th width="8%">下次运行时间</th>
+                <th width="8%">创建时间</th>
+                <th width="10%">说明</th>
+                <th width="6%">操作</th>
+            </tr>
+
+            @if (Model != null && Model.Items.Count > 0)
+            {
+                foreach (var item in Model.Items)
+                {
+                <tr>
+                    <td>@item.TaskID</td>
+                    <td>@item.TaskName</td>
+                    <td>@item.CronRemark</td>
+                    <td>@item.Status</td>
+                    <td>@item.RecentRunTime</td>
+                    <td>@item.NextFireTime</td>
+                    <td>@item.CreatedTime</td>
+                    <td>@item.Remark</td>
+                    <td>
+                        <a href="javascript:void(0)" class="edit" data-id="@item.TaskID">编辑</a>&nbsp; 
+                        @if (item.Status == TaskStatus.RUN)
+                        {
+                            <a href="javascript:void(0)" class="updatestatus" data-id="@item.TaskID" data-status="0">停止</a>
+                        }
+                        else
+                        {
+                            <a href="javascript:void(0)" class="updatestatus" data-id="@item.TaskID" data-status="1">运行</a>
+                        }
+                    </td>
+                </tr>
+                }
+            }
+        </table>
+        @if (Model != null && Model.Items.Count > 0)
+        {
+            <div class="pagination">
+                @Html.ShowFPage(Url.Action(null
+                        , new
+                        {
+                            PageNo = "{0}",
+                        })
+                        , (int)Model.PageIndex
+                        , 20
+                        , (int)Model.Total)
+            </div>
+
+        }
+    </div>
+</div>
+
+<script src="~/Content/Scripts/Grid.js"></script>

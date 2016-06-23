@@ -1,0 +1,137 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    #loginbox {
+        width: 460px;
+        height: 330px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        margin-left: -230px;
+        margin-top: -165px;
+        border-top: 1px solid #3F4954;
+        padding-top: 20px;
+    }
+
+
+
+        #loginbox .login_lg {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+    .login_lg div {
+        display: inline-block;
+    }   
+
+    .login_lg div {
+        *display: inline;
+    }
+
+    .lg_input_div {
+        width: 250px;
+        height: 38px;
+        
+        /*padding:5px 0px;*/
+        padding-left: 45px;
+    }
+
+    .lg_user {
+        background: #fff url(/Content/images/login_bg.jpg) no-repeat -6px 0;
+    }
+
+    .lg_psd {
+        background: #fff url(/Content/images/login_bg.jpg) no-repeat -6px -38px;
+    }
+
+    .lg_input_div input[type=text], .lg_input_div input[type=password] {
+        /*width: 250px;
+        line-height: 16px;
+        border: none;
+        font-size: 14px;
+        padding: 11px 0px 11px 8px;*/
+    }
+
+    #userName, #pwd {
+        width:  220px;
+        height: 30px\9;
+        *height: 28px\9;
+        padding-top:8px;
+        
+        border: none;
+        font-size: 14px;
+    }
+
+    .lg_btn {
+        border-top: 1px solid #3F4954;
+        padding: 20px 20px 20px 0;
+        text-align: right;
+    }
+
+    .btn2 {
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+        background-repeat: repeat-x;
+        *border: 0;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        color: #FFFFFF;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+
+    .btn2 {
+        background-color: #006DCC;
+    }
+
+        .btn2:hover {
+            background: #0044cc;
+        }
+
+    * {
+        margin: 0;
+        padding: 0;
+        word-break: break-all;
+    }
+
+    body {
+        font: 12px/1.5em "Microsoft YaHei","微软雅黑",Verdana,Helvetica,Arial,sans-serif;
+        text-align: left;
+        color: #666;
+        margin: 0px;
+        background: #2E363F;
+    }
+</style>
+<div id="loginbox">
+    <form id="loginform"   class="form-vertical" action="@Url.Action("UserLogin")" method="post">
+        <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />
+        <div class="login_lg">
+            <img src="~/Content/Images/logo.png" alt="Logo" />
+        </div>
+        <div class="login_lg">
+            <div class="lg_input_div lg_user" align="left">
+                <input type="text" name="userName" id="userName" placeholder = "用户名" />               
+            </div>
+        </div>
+        <div class="login_lg">
+            <div class="lg_input_div lg_psd" align="left">
+                <input type="password" name="pwd" id="pwd" placeholder = "密码" />
+            </div>
+        </div>
+
+      @*  <div class="login_lg">
+            <div class="lg_input_div lg_user" align="left">
+                <input type="text" placeholder="验证码" id="code" style="width: 160px !important;" />
+            </div>
+        </div>*@
+        <div class="login_lg">
+            <div style="color: #f00;" id="err_info">
+                @ViewBag.ErrorInfo
+            </div>
+        </div>
+        <div class="lg_btn" style="text-align: center;">
+            <button id="btnLogin" type="submit" class="btn2">登录</button>
+        </div>
+    </form>
+</div>

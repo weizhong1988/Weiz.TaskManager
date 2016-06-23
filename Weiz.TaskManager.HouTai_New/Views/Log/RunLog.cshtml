@@ -1,0 +1,52 @@
+﻿@using Weiz.TaskManager.Models;
+@model PageOf<RunLogModel>
+
+<div class="breadclip">
+    <i class="homeIcon inline"></i><a href="#">首页</a><a href="#">日志分析</a>运行日志
+</div>
+<div class="pd20">
+    <div class="sub_title">
+        <div class="inline f_l">运行日志列表</div>
+    </div>
+    <div class="list_tablebox mg_t10">
+        <table cellpadding="0" cellspacing="1" border="0">
+            <tr>
+                <th width="5%">Id</th>
+                <th width="15%">备注</th>
+                <th width="15%">描述</th>
+                <th width="5%">时间</th>
+                <th width="8%">任务名称</th>
+                <th width="8%">任务类名</th>
+            </tr>
+
+            @if (Model != null && Model.Items.Count > 0)
+            {
+                foreach (var item in Model.Items)
+                {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Remark</td>
+                    <td>@item.Description</td>
+                    <td>@item.CreateTime</td>
+                    <td>@item.TaskName</td>
+                    <td>@item.ClassName</td>
+                </tr>
+                }
+            }
+        </table>
+        @if (Model != null && Model.Items.Count > 0)
+        {
+            <div class="pagination">
+                @Html.ShowFPage(Url.Action(null
+                        , new
+                        {
+                            PageNo = "{0}",
+                        })
+                        , (int)Model.PageIndex
+                        , 20
+                        , (int)Model.Total)
+            </div>
+
+        }
+    </div>
+</div>

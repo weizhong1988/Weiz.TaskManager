@@ -1,0 +1,9 @@
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Release\Weiz.TaskManager.BLL.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Release\Weiz.TaskManager.BLL.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Release\Weiz.TaskManager.DAL.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Release\Weiz.TaskManager.Models.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Release\Weiz.TaskManager.DAL.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Release\Weiz.TaskManager.Models.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\obj\Release\Weiz.TaskManager.BLL.csprojResolveAssemblyReference.cache
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\obj\Release\Weiz.TaskManager.BLL.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\obj\Release\Weiz.TaskManager.BLL.pdb

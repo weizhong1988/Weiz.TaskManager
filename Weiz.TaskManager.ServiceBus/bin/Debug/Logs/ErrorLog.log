@@ -1,0 +1,79 @@
+ERROR 2016-06-22 11:24:11,396 [logerror] 任务调度停止失败！
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StopSchedule() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 298
+ERROR 2016-06-22 11:25:16,731 [logerror] 任务调度停止失败！
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StopSchedule() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 298
+ERROR 2016-06-22 11:25:43,075 [logerror] 任务调度停止失败！
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StopSchedule() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 298
+ERROR 2016-06-22 11:27:35,992 [logerror] 任务调度停止失败！
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StopSchedule() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 298
+ERROR 2016-06-22 11:30:42,535 [logerror] 任务调度停止失败！
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StopSchedule() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 298
+ERROR 2016-06-22 14:21:43,414 [logerror] 任务调度启动失败！
+System.InvalidCastException: 从“System.String”到“Weiz.TaskManager.Models.TaskStatus”的强制转换无效。
+   在 System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   在 System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Weiz.TaskManager.Utility.XmlHelper.XmlToList[T](String xml, String headtag) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\XmlHelper.cs:行号 226
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.ReadTaskConfig() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 110
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.GetAllTaskList() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 125
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StartScheduler() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 104
+ERROR 2016-06-22 14:24:57,898 [logerror] 任务调度启动失败！
+System.InvalidCastException: 从“System.String”到“Weiz.TaskManager.Models.TaskStatus”的强制转换无效。
+   在 System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   在 System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Weiz.TaskManager.Utility.XmlHelper.XmlToList[T](String xml, String headtag) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\XmlHelper.cs:行号 226
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.ReadTaskConfig() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 110
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.GetAllTaskList() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 125
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StartScheduler() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 104
+ERROR 2016-06-22 14:55:41,535 [logerror] 任务调度启动失败！
+System.InvalidCastException: 从“System.String”到“Weiz.TaskManager.Models.TaskStatus”的强制转换无效。
+   在 System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   在 System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Weiz.TaskManager.Utility.XmlHelper.XmlToList[T](String xml, String headtag) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\XmlHelper.cs:行号 232
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.ReadTaskConfig() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 110
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.GetAllTaskList() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 125
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StartScheduler() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 104
+ERROR 2016-06-22 14:57:16,007 [logerror] 任务调度启动失败！
+System.InvalidCastException: 从“System.String”到“Weiz.TaskManager.Models.TaskStatus”的强制转换无效。
+   在 System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   在 System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType)
+   在 Weiz.TaskManager.Utility.XmlHelper.XmlToList[T](String xml, String headtag) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\XmlHelper.cs:行号 232
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.ReadTaskConfig() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 110
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.GetAllTaskList() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 125
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StartScheduler() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 104
+ERROR 2016-06-22 16:11:59,088 [logerror] 任务调度启动失败！
+System.FormatException: 该字符串未被识别为有效的 DateTime。
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value, IFormatProvider provider)
+   在 System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 Weiz.TaskManager.Utility.ConvertHelper.ChangeType(Object obj, Type conversionType, IFormatProvider provider) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\ConvertHelper.cs:行号 25
+   在 Weiz.TaskManager.Utility.ConvertHelper.ChangeType(Object obj, Type conversionType) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\ConvertHelper.cs:行号 14
+   在 Weiz.TaskManager.Utility.XmlHelper.XmlToList[T](String xml, String headtag) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\XmlHelper.cs:行号 222
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.ReadTaskConfig() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 110
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.GetAllTaskList() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 125
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StartScheduler() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 104
+ERROR 2016-06-22 16:14:22,096 [logerror] 任务调度启动失败！
+System.FormatException: 该字符串未被识别为有效的 DateTime。
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value, IFormatProvider provider)
+   在 System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   在 System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   在 Weiz.TaskManager.Utility.ConvertHelper.ChangeType(Object obj, Type conversionType, IFormatProvider provider) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\ConvertHelper.cs:行号 25
+   在 Weiz.TaskManager.Utility.ConvertHelper.ChangeType(Object obj, Type conversionType) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\ConvertHelper.cs:行号 14
+   在 Weiz.TaskManager.Utility.XmlHelper.XmlToList[T](String xml, String headtag) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\File\XmlHelper.cs:行号 222
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.ReadTaskConfig() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 110
+   在 Weiz.TaskManager.TaskUtility.TaskHelper.GetAllTaskList() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\TaskHelper.cs:行号 125
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StartScheduler() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 104

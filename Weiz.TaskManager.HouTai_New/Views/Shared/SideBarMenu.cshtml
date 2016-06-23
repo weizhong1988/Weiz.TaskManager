@@ -1,0 +1,66 @@
+﻿<div class="subMenu">
+    <h3><i class="mnIcon menubg11 inline"></i>任务管理</h3>
+    <ul>
+        <li data-value="Grid"><a href="/Task/Grid">任务管理</a></li>
+    </ul>
+</div>
+<div class="subMenu">
+    <h3><i class="mnIcon menubg8 inline"></i>Cron表达式</h3>
+    <ul class="none">
+        <li data-value="Index"><a href="/Cron/Index">Cron表达式</a></li>
+    </ul>
+</div>
+<div class="subMenu">
+    <h3><i class="mnIcon menubg9 inline"></i>账号管理</h3>
+    <ul class="none">
+        <li data-value="List"><a href="/User/List">用户管理</a></li>
+    </ul>
+</div>
+<div class="subMenu">
+    <h3><i class="mnIcon menubg10 inline"></i>日志分析</h3>
+    <ul class="none">
+        <li data-value="RunLog"><a href="/Log/RunLog">运行日志</a></li>
+        <li data-value="ErrorLog"><a href="/Log/ErrorLog">错误日志</a></li>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var pageName = $("#hd_PageName").val();
+
+        $(".subMenu ul").each(function () {
+            $(this).removeClass().addClass("none");
+        })
+        $(".subMenu li").each(function () {
+            var datavalue = $(this).attr("data-value");
+            $(this).removeClass();
+            if (pageName == datavalue) {
+                $(this).parent().removeClass().addClass("block");
+                $(this).removeClass().addClass("current");
+                $(this).children().addClass("checked");
+                $(this).parent().prev().addClass("checked");
+            }
+        })
+
+        var menuTitle = $(".subMenu h3");
+
+        menuTitle.click(function () {
+            menuTitle.removeClass("checked");
+            $(this).addClass("checked");
+            $(".subMenu ul").each(function () {
+                $(this).hide();
+            });
+            $(this).next("ul").show();
+
+        }).mouseover(function () {
+            $(this).addClass("checked");
+        }).mouseout(function () {
+            $(this).removeClass("checked");
+        });
+        if (pageName.length == 0) {
+            $(".leftMenu h3:first").addClass("checked");
+            $(".leftMenu h3:first").next().show();
+        }
+    })
+
+</script>
