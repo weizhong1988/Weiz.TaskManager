@@ -5,6 +5,7 @@ using System.Text;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using Weiz.TaskManager.TaskUtility;
+using Weiz.TaskManager.Utility;
 
 namespace Weiz.TaskManager.HouTai_New.Controllers
 {
@@ -22,9 +23,7 @@ namespace Weiz.TaskManager.HouTai_New.Controllers
             {
                 var result = QuartzHelper.GetNextFireTime(cronExpressionString, 5);
 
-                JavaScriptSerializer js = new JavaScriptSerializer();
-
-                string msg = js.Serialize(result);
+                string msg = JsonHelper.ToJson(result);
 
                 return Json(new { result = true, msg = msg });
             }

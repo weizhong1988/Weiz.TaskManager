@@ -45,12 +45,12 @@
                 });
 
                 var start = currentIndex > 3 ? 3 : currentIndex;
-                for (var i = start; i >= 1 ; i--) {
+                for (var i = start; i >= 0 ; i--) {
                     if (item[currentIndex] != "*" && item[i - 1] == "*") {
                         item[i - 1] = "0";
                         $(v_input[i - 1]).val("0");
                         //// 把的之前的选项变成指定，并默认第一个
-                        var box = boxs[i];
+                        var box = boxs[i - 1];
                         $(box).find(".choose").attr("checked", true);
                         $(box).find("div[class$='_list']").children().eq(0).attr("checked", true);
                     }
@@ -90,6 +90,19 @@
 
                 cron.generate();
             },
+            start: function (name) {
+                var ns = $("#" + name + "_chooser_start").parent().find(".numberspinner");
+
+                var start = ns.eq(0).val();
+                var end = ns.eq(1).val();
+
+                var val = start + "/" + end;
+
+                var item = $("input[name=v_" + name + "]");
+                item.val(val);
+                cron.generate();
+            }
+            ,
             choose: function (name) {
                 var checked = $("#" + name + "_chooser_choose").prop("checked");
                 var checklist = $("." + name + "_list").children();
@@ -150,7 +163,7 @@ $(function () {
         }
     });
 
-    $(".every,.nochoose,.choose,.cycle").live("click", function (e) {
+    $(".every,.nochoose,.choose,.cycle,.start").live("click", function (e) {
         var the = $(this);
         if (the.is(".every")) {
             var name = the.attr("name").split("_")[0];
@@ -167,6 +180,10 @@ $(function () {
         if (the.is(".cycle")) {
             var name = the.attr("name").split("_")[0];
             cron.cycle(name);
+        }
+        if (the.is(".start")) {
+            var name = the.attr("name").split("_")[0];
+            cron.start(name);
         }
     });
 

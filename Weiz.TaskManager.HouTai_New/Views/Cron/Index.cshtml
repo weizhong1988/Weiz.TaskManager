@@ -20,20 +20,29 @@
                 <div class="main" id="main1">
                     <div class="box">
                         <div class="line">
-                            <input type="radio" name="second_chooser" id="second_chooser_every" class="every" checked="checked" /><label>每秒</label>
+                            <input type="radio" name="second_chooser" id="second_chooser_every" class="every" checked="checked" />
+                            每秒
+                        </div>
+
+                        <div class="line">
+                            <input type="radio" name="second_chooser" id="second_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" value="0" id="secondStart_1">
+                            秒开始,每
+                            <input class="numberspinner" style="width: 60px;" value="1" id="secondEnd_1">
+                            秒执行一次
                         </div>
                         <div class="line">
                             <input type="radio" name="second_chooser" id="second_chooser_cycle" class="cycle" />
                             周期从
-                            <input class="numberspinner" style="width: 60px;" data-options="min:1,max:58" value="1"
-                                id="secondStart_0">
+                            <input class="numberspinner" style="width: 60px;" value="1" id="secondStart_0">
                             -
-                            <input class="numberspinner" style="width: 60px;" data-options="min:2,max:59" value="2"
-                                id="secondEnd_0">
+                            <input class="numberspinner" style="width: 60px;" value="2" id="secondEnd_0">
                             秒
                         </div>
                         <div class="line">
-                            <input type="radio" name="second_chooser" id="second_chooser_choose" class="choose" /><label>指定</label><br />
+                            <input type="radio" name="second_chooser" id="second_chooser_choose" class="choose" />
+                            指定
                         </div>
                         <div class="second_list" style="padding-left: 25px;">
                             <input type="checkbox" value="0">00
@@ -110,20 +119,28 @@
                     </div>
                     <div class="box" style="display: none">
                         <div class="line">
-                            <input type="radio" name="minute_chooser" id="minute_chooser_every" class="every" checked="checked" /><label>每分</label>
+                            <input type="radio" name="minute_chooser" id="minute_chooser_every" class="every" checked="checked" />
+                            每分
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="minute_chooser" id="minute_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" value="0" id="minStart_1">
+                            分钟开始,每
+                            <input class="numberspinner" style="width: 60px;" value="1" id="minEnd_1">
+                            分钟执行一次
                         </div>
                         <div class="line">
                             <input type="radio" name="minute_chooser" id="minute_chooser_cycle" class="cycle" />
                             周期从
-                            <input class="numberspinner" style="width: 60px;" data-options="min:1,max:58" value="1"
-                                id="minStart_0">
+                            <input class="numberspinner" style="width: 60px;" value="1" id="minStart_0">
                             -
-                            <input class="numberspinner" style="width: 60px;" data-options="min:2,max:59" value="2"
-                                id="minEnd_0">
+                            <input class="numberspinner" style="width: 60px;" value="2" id="minEnd_0">
                             分钟
                         </div>
                         <div class="line">
-                            <input type="radio" name="minute_chooser" id="minute_chooser_choose" class="choose" /><label>指定</label>
+                            <input type="radio" name="minute_chooser" id="minute_chooser_choose" class="choose" />
+                            指定
                         </div>
                         <div class="minute_list" style="padding-left: 25px;">
                             <input type="checkbox" value="0">00
@@ -200,20 +217,30 @@
                     </div>
                     <div class="box" style="display: none">
                         <div class="line">
-                            <input type="radio" name="hour_chooser" id="hour_chooser_every" class="every" checked="checked" /><label>每小时</label>
+                            <input type="radio" name="hour_chooser" id="hour_chooser_every" class="every" checked="checked" />
+                            每小时
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="hour_chooser" id="hour_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" value="0" id="hourStart_1">
+                            小时开始,每
+                            <input class="numberspinner" style="width: 60px;" value="1" id="hourEnd_1">
+                            小时执行一次
                         </div>
                         <div class="line">
                             <input type="radio" name="hour_chooser" id="hour_chooser_cycle" class="cycle">
                             周期从
-                            <input class="numberspinner" style="width: 60px;" data-options="min:0,max:23" value="0"
+                            <input class="numberspinner" style="width: 60px;" value="0"
                                 id="hourStart_0">
                             -
-                            <input class="numberspinner" style="width: 60px;" data-options="min:2,max:23" value="2"
+                            <input class="numberspinner" style="width: 60px;" value="2"
                                 id="hourEnd_0">
                             小时
                         </div>
                         <div class="line">
-                            <input type="radio" name="hour_chooser" id="hour_chooser_choose" class="choose" /><label>指定</label>
+                            <input type="radio" name="hour_chooser" id="hour_chooser_choose" class="choose" />
+                            指定
                         </div>
                         <div class="hour_list" style="padding-left: 25px;">
                             AM:
@@ -248,7 +275,16 @@
                     </div>
                     <div class="box" style="display: none" style="padding-left: 25px;">
                         <div class="line">
-                            <input type="radio" name="day_chooser" id="day_chooser_every" class="every" checked="checked" /><label>每日</label>
+                            <input type="radio" name="day_chooser" id="day_chooser_every" class="every" checked="checked" />
+                            每日
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="day_chooser" id="day_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" value="1" id="dayStart_1">
+                            日开始,每
+                            <input class="numberspinner" style="width: 60px;" value="1" id="dayEnd_1">
+                            天执行一次
                         </div>
                         <div class="line">
                             <input type="radio" name="day_chooser" id="day_chooser_cycle" class="cycle" />
@@ -261,10 +297,12 @@
                             日
                         </div>
                         <div class="line">
-                            <input type="radio" name="day_chooser" id="day_chooser_nochoose" class="nochoose" /><label>不指定</label>
+                            <input type="radio" name="day_chooser" id="day_chooser_nochoose" class="nochoose" />
+                            不指定
                         </div>
                         <div class="line">
-                            <input type="radio" name="day_chooser" id="day_chooser_choose" class="choose" /><label>指定</label>
+                            <input type="radio" name="day_chooser" id="day_chooser_choose" class="choose" />
+                            指定
                         </div>
                         <div class="day_list" style="padding-left: 25px;">
                             <input type="checkbox" value="1">01
@@ -305,7 +343,18 @@
                     </div>
                     <div class="box" style="display: none">
                         <div class="line">
-                            <input type="radio" name="month_chooser" id="month_chooser_every" class="every" checked="checked" /><label>每月</label>
+                            <input type="radio" name="month_chooser" id="month_chooser_every" class="every" checked="checked" />
+                            每月
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="month_chooser" id="month_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" data-options="min:1,max:12" value="1"
+                                id="mouthStart_1">
+                            日开始,每
+                            <input class="numberspinner" style="width: 60px;" data-options="min:1,max:12" value="1"
+                                id="mouthEnd_1">
+                            月执行一次
                         </div>
                         <div class="line">
                             <input type="radio" name="month_chooser" id="month_chooser_cycle" class="cycle">
@@ -318,7 +367,8 @@
                             月
                         </div>
                         <div class="line">
-                            <input type="radio" name="month_chooser" id="month_chooser_choose" class="choose" /><label>指定</label>
+                            <input type="radio" name="month_chooser" id="month_chooser_choose" class="choose" />
+                            指定
                         </div>
                         <div class="month_list" style="padding-left: 25px;">
                             <input type="checkbox" value="1">1
@@ -337,7 +387,13 @@
                     </div>
                     <div class="box" style="display: none">
                         <div class="line">
-                            <input type="radio" name="weekday_chooser" id="weekday_chooser_every" class="every" /><label>每周</label>
+                            <input type="radio" name="weekday_chooser" id="weekday_chooser_every" class="every" />
+                            每周
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="weekday_chooser" id="weekday_chooser_start" class="start">
+                            第<input class="numberspinner" style="width: 60px;" value="1" id="weekdayStart_1">
+                            周 的星期<input class="numberspinner" style="width: 60px;" id="weekdayEnd_1" value="1">
                         </div>
                         <div class="line">
                             <input type="radio" name="weekday_chooser" id="weekday_chooser_cycle" class="cycle">
@@ -348,10 +404,12 @@
                                 id="weekEnd_0">
                         </div>
                         <div class="line">
-                            <input type="radio" name="weekday_chooser" id="weekday_chooser_nochoose" class="nochoose" checked="checked" /><label>不指定</label>
+                            <input type="radio" name="weekday_chooser" id="weekday_chooser_nochoose" class="nochoose" checked="checked" />
+                            不指定
                         </div>
                         <div class="line">
-                            <input type="radio" name="weekday_chooser" id="weekday_chooser_choose" class="choose" /><label>指定</label>
+                            <input type="radio" name="weekday_chooser" id="weekday_chooser_choose" class="choose" />
+                            指定
                         </div>
                         <div class="weekday_list" style="padding-left: 25px;">
                             <input type="checkbox" value="1">Sunday
@@ -365,10 +423,12 @@
                     </div>
                     <div class="box" style="display: none">
                         <div class="line">
-                            <input type="radio" name="year_chooser" id="year_chooser_every" class="every" checked="checked" /><label>每年</label>
+                            <input type="radio" name="year_chooser" id="year_chooser_every" class="every" checked="checked" />
+                            每年
                         </div>
                         <div class="line">
-                            <input type="radio" name="year_chooser" id="year_chooser_cycle" class="cycle">周期 从
+                            <input type="radio" name="year_chooser" id="year_chooser_cycle" class="cycle">
+                            周期 从
                             <input class="numberspinner" style="width: 90px;" data-options="min:2013,max:3000"
                                 id="yearStart_0" value="2013">
                             -
@@ -376,7 +436,8 @@
                                 id="yearEnd_0" value="2014">
                         </div>
                         <div class="line">
-                            <input type="radio" name="year_chooser" id="year_chooser_nochoose" class="nochoose" /><label>不指定</label>
+                            <input type="radio" name="year_chooser" id="year_chooser_nochoose" class="nochoose" />
+                            不指定
                         </div>
                     </div>
                 </div>
