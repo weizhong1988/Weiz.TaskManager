@@ -7,3 +7,4 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\bin\Debug\log4net.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\bin\Debug\Newtonsoft.Json.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\obj\Debug\Weiz.TaskManager.Utility.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\obj\Debug\Weiz.TaskManager.Utility.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Utility\obj\Debug\Weiz.TaskManager.Utility.csprojResolveAssemblyReference.cache

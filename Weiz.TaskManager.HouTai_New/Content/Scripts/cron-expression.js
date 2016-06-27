@@ -95,8 +95,20 @@
 
                 var start = ns.eq(0).val();
                 var end = ns.eq(1).val();
+                var val = "";
+                if (name == "weekday") {
+                    val = start + "#" + end;
 
-                var val = start + "/" + end;
+                    $("#day_chooser_nochoose").attr("checked", true);
+                    var item = $("input[name=v_day]").val("?");
+                }
+                else {
+                    if (name == "day") {
+                        $("#weekday_chooser_nochoose").attr("checked", true);
+                        var item = $("input[name=v_weekday]").val("?");
+                    }
+                    val = start + "/" + end;
+                }
 
                 var item = $("input[name=v_" + name + "]");
                 item.val(val);
@@ -161,6 +173,32 @@ $(function () {
         if (the.is("#submit")) {
             cron.submit();
         }
+    });
+
+    $(".numberspinner").blur(function () {
+        var the = $(this).parent().find("input[type=radio]");
+        var ischecked = the.prop("checked");
+        var name = the.attr("name").split("_")[0]
+
+        if (ischecked)
+        {
+            if (the.is(".every")) {
+                cron.everyTime(name);
+            }
+            if (the.is(".nochoose")) {
+                cron.nochoose(name);
+            }
+            if (the.is(".choose")) {
+                cron.choose(name);
+            }
+            if (the.is(".cycle")) {
+                cron.cycle(name);
+            }
+            if (the.is(".start")) {
+                cron.start(name);
+            }
+        }
+
     });
 
     $(".every,.nochoose,.choose,.cycle,.start").live("click", function (e) {
