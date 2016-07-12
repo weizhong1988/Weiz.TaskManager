@@ -10,7 +10,6 @@ namespace Weiz.TaskManager.Utility
 {
     /// <summary>
     /// 配置文件信息初始化,为了解决团队开发中,每个人的config文件不一致,而需要修改app.config或者web.config
-    /// 下次获取最新又覆盖了本地修改的相关配置问题，通过添加本地配置文件格式为app_Local.config开解决此问题
     /// </summary>
     public class ConfigInit
     {

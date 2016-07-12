@@ -6,16 +6,8 @@ using System.Text;
 namespace Weiz.TaskManager.Utility
 {
     /// <summary>
-    /// 缓存系统所有配置信息，以键值对形式存在
-    /// </summary>
-    /// <remarks>
-    /// 系统相关配置信息都应该通过此类的静态属性读取
-    /// </remarks>
-    /// <example>
-    /// 获取连接字符串 SysConfig.SqlConnect
-    /// </example>
-    /// <summary>
     /// 系统的配置
+    /// 获取连接字符串 SysConfig.SqlConnect
     /// </summary>
     public class SysConfig
     {
