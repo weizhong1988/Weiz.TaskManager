@@ -1,21 +1,22 @@
-﻿using Weiz.TaskManager.Utility;
-using Quartz;
+﻿using Quartz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using Weiz.TaskManager.Models;
 using Weiz.TaskManager.TaskUtility;
+using Weiz.TaskManager.Utility;
 
 namespace Weiz.TaskManager.TaskSet
 {
     /// <summary>
-    /// 测试任务
+    /// 取消超时订单
     /// </summary>
     ///<remarks>DisallowConcurrentExecution属性标记任务不可并行，要是上一任务没运行完即使到了运行时间也不会运行</remarks>
     [DisallowConcurrentExecution]
-    public class TestJob : IJob
+    public class OrderCancel:IJob
     {
         public void Execute(IJobExecutionContext context)
         {
@@ -28,12 +29,10 @@ namespace Weiz.TaskManager.TaskSet
 
                 // 3. 开始执行相关任务
                 LogHelper.WriteLog(task.TaskName + ",当前系统时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-
                 Thread.Sleep(9000);
 
                 // 4. 记录Task 运行状态数据库
                 DbLogHelper.WriteRunInfo(task.TaskName + " 结束", task.TaskID.ToString(), "成功执行");
-               
             }
             catch (Exception ex)
             {
