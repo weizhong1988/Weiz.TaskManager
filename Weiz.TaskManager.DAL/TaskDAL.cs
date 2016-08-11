@@ -11,6 +11,12 @@ namespace Weiz.TaskManager.DAL
 {
     public class TaskDAL
     {
+        /// <summary>
+        /// 获取任务列表
+        /// </summary>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
         public PageOf<TaskModel> GetTaskList(int pageIndex, int pageSize)
         {
             var QUERY_SQL = @"( SELECT TaskID,TaskName,TaskParam,CronExpressionString,AssemblyName,ClassName,Status,IsDelete,CreatedTime,ModifyTime,RecentRunTime,NextFireTime,CronRemark,Remark
@@ -36,6 +42,10 @@ namespace Weiz.TaskManager.DAL
             };
         }
 
+        /// <summary>
+        /// 读取数据库中全部的任务
+        /// </summary>
+        /// <returns></returns>
         public List<TaskModel> GetAllTaskList()
         {
             var sql = @"SELECT TaskID,TaskName,TaskParam,CronExpressionString,AssemblyName,ClassName,Status,IsDelete,CreatedTime,ModifyTime,RecentRunTime,NextFireTime,CronRemark,Remark
@@ -48,6 +58,11 @@ namespace Weiz.TaskManager.DAL
 
         }
 
+        /// <summary>
+        /// 删除任务
+        /// </summary>
+        /// <param name="taskId"></param>
+        /// <returns></returns>
         public bool UpdateTaskStatus(string taskId, int status)
         {
             var sql = @" UPDATE p_Task
@@ -59,6 +74,12 @@ namespace Weiz.TaskManager.DAL
             return SQLHelper.ExecuteNonQuery(sql, param) > 0;
         }
 
+        /// <summary>
+        /// 修改任务的下次启动时间
+        /// </summary>
+        /// <param name="taskId"></param>
+        /// <param name="nextFireTime"></param>
+        /// <returns></returns>
         public bool UpdateNextFireTime(string taskId, DateTime nextFireTime)
         {
             var sql = @" UPDATE p_Task
@@ -71,6 +92,12 @@ namespace Weiz.TaskManager.DAL
             return SQLHelper.ExecuteNonQuery(sql, param) > 0;
         }
 
+        /// <summary>
+        /// 根据任务Id 修改 上次运行时间
+        /// </summary>
+        /// <param name="taskId"></param>
+        /// <param name="recentRunTime"></param>
+        /// <returns></returns>
         public bool UpdateRecentRunTime(string taskId, DateTime recentRunTime)
         {
             var sql = @" UPDATE p_Task
@@ -83,6 +110,11 @@ namespace Weiz.TaskManager.DAL
             return SQLHelper.ExecuteNonQuery(sql, param) > 0;
         }
 
+        /// <summary>
+        /// 根据任务Id 获取任务
+        /// </summary>
+        /// <param name="taskId"></param>
+        /// <returns></returns>
         public TaskModel GetTaskById(string taskId)
         {
             var sql = @"SELECT TaskID,TaskName,TaskParam,CronExpressionString,AssemblyName,ClassName,Status,IsDelete,CreatedTime,ModifyTime,RecentRunTime,NextFireTime,CronRemark,Remark
@@ -95,6 +127,11 @@ namespace Weiz.TaskManager.DAL
             return result;
         }
 
+        /// <summary>
+        /// 添加任务
+        /// </summary>
+        /// <param name="task"></param>
+        /// <returns></returns>
         public bool Add(TaskModel task)
         {
             var sql = @" INSERT INTO p_Task
@@ -118,6 +155,11 @@ namespace Weiz.TaskManager.DAL
             return SQLHelper.ExecuteNonQuery(sql, param) > 0;
         }
 
+        /// <summary>
+        /// 修改任务
+        /// </summary>
+        /// <param name="task"></param>
+        /// <returns></returns>
         public bool Edit(TaskModel task)
         {
 

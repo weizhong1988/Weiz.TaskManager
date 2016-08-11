@@ -9,7 +9,13 @@ using Weiz.TaskManager.Utility;
 namespace Weiz.TaskManager.DAL
 {
     public class LogDAL
-    {
+    {  
+        /// <summary>
+        /// 记录运行日志
+        /// </summary>
+        /// <param name="taskName"></param>
+        /// <param name="taskId"></param>
+        /// <param name="result"></param>
         public void WriteRunInfo(string remark, string taskId, string result)
         {
             var sql = @"INSERT INTO p_RunningLog
@@ -28,6 +34,13 @@ namespace Weiz.TaskManager.DAL
             SQLHelper.ExecuteNonQuery(sql, param);
         }
 
+        /// <summary>
+        /// 记录错误日志
+        /// </summary>
+        /// <param name="sLevel"></param>
+        /// <param name="sMessage"></param>
+        /// <param name="sException"></param>
+        /// <param name="sName"></param>
         public void WriteErrorInfo(string sLevel , string sMessage, string sException, string sName)
         {
             var sql = @"INSERT INTO p_ErrorLog
@@ -50,6 +63,12 @@ namespace Weiz.TaskManager.DAL
             SQLHelper.ExecuteNonQuery(sql, param);
         }
 
+        /// <summary>
+        /// 读取错误日志列表
+        /// </summary>
+        /// <param name="pageNo"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
         public PageOf<ErrorLogModel> GetErrorLogList(int pageNo, int pageSize)
         {
             var QUERY_SQL = @"(  select nId,dtDate,sThread,sLevel,sLogger,sMessage,sException,sName
@@ -75,6 +94,12 @@ namespace Weiz.TaskManager.DAL
             };
         }
 
+        /// <summary>
+        /// 读取运行日志列表
+        /// </summary>
+        /// <param name="pageNo"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
         public PageOf<RunLogModel> GetRunLogList(int pageNo, int pageSize)
         {
             var QUERY_SQL = @"( select r.Id,r.Remark,r.Description,r.CreateTime,t.TaskName,t.ClassName 

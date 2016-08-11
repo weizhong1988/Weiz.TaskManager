@@ -126,7 +126,10 @@ namespace Weiz.TaskManager.TaskUtility
             }
         }
 
-
+        /// <summary>
+        /// 初始化 远程Quartz服务器中的，各个Scheduler实例。
+        /// 提供给远程管理端的后台，用户获取Scheduler实例的信息。
+        /// </summary>
         public static void InitRemoteScheduler()
         {
             try
@@ -259,7 +262,7 @@ namespace Weiz.TaskManager.TaskUtility
             }
             catch (Exception ex)
             {
-                throw ex;
+                LogHelper.WriteLog("恢复任务失败！", ex);
             }
         }
 
@@ -342,7 +345,7 @@ namespace Weiz.TaskManager.TaskUtility
         }
 
         /// <summary>
-        /// 
+        /// 获取当前执行的Task 对象
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>

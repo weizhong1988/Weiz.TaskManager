@@ -1,4 +1,3 @@
-E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\obj\Debug\Weiz.TaskManager.BLL.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\log4net.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Weiz.TaskManager.BLL.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Weiz.TaskManager.BLL.pdb
@@ -6,11 +5,12 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Weiz.TaskManager.DAL
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Weiz.TaskManager.Models.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Weiz.TaskManager.Utility.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\log4net.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Newtonsoft.Json.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Weiz.TaskManager.DAL.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Weiz.TaskManager.Models.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Weiz.TaskManager.Utility.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\log4net.xml
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Newtonsoft.Json.xml
+E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\obj\Debug\Weiz.TaskManager.BLL.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\obj\Debug\Weiz.TaskManager.BLL.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\obj\Debug\Weiz.TaskManager.BLL.pdb
-E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Newtonsoft.Json.dll
-E:\vs2012\TaskManager-master\Weiz.TaskManager.BLL\bin\Debug\Newtonsoft.Json.xml

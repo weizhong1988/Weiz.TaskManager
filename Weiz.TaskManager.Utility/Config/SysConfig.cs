@@ -25,7 +25,7 @@ namespace Weiz.TaskManager.Utility
         [PathMap(Key = "QuartzPort")]
         public static string QuartzPort { get; set; }
 
-        #endregion 
+        #endregion
 
         /// <summary>
         /// 任务配置的存储方式

@@ -1,6 +1,6 @@
-E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\obj\Debug\Weiz.TaskManager.ServiceBus.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\log4net.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\App.config
+E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Config\TaskConfig.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Config\Config.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Weiz.TaskManager.ServiceBus.exe.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Weiz.TaskManager.ServiceBus.exe
@@ -14,6 +14,7 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Weiz.TaskMana
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Weiz.TaskManager.DAL.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Quartz.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\log4net.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Newtonsoft.Json.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Common.Logging.Core.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Common.Logging.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Weiz.TaskManager.BLL.pdb
@@ -23,8 +24,7 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Weiz.TaskMana
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Weiz.TaskManager.Utility.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Weiz.TaskManager.DAL.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\log4net.xml
+E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Newtonsoft.Json.xml
+E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\obj\Debug\Weiz.TaskManager.ServiceBus.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\obj\Debug\Weiz.TaskManager.ServiceBus.exe
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\obj\Debug\Weiz.TaskManager.ServiceBus.pdb
-E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Newtonsoft.Json.dll
-E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Newtonsoft.Json.xml
-E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Debug\Config\TaskConfig.xml

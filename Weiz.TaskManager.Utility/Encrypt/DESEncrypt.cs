@@ -11,7 +11,7 @@ namespace Weiz.TaskManager.Utility
     {
         private static readonly string KEY = "Weiz";
 
-        #region ========加密======== 
+        #region ========加密========
 
         /// <summary>
         /// 加密
@@ -50,7 +50,7 @@ namespace Weiz.TaskManager.Utility
 
         #endregion
 
-        #region ========解密======== 
+        #region ========解密========
 
 
         /// <summary>

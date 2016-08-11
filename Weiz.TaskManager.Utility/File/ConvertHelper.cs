@@ -9,6 +9,7 @@ namespace Weiz.TaskManager.Utility
     public static class ConvertHelper
     {
         #region = ChangeType =
+
         public static object ChangeType(object obj, Type conversionType)
         {
             return ChangeType(obj, conversionType, Thread.CurrentThread.CurrentCulture);

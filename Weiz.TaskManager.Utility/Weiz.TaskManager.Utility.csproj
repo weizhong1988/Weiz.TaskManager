@@ -52,11 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="File\ConvertHelper.cs" />
-    <Compile Include="Config\ConfigInit.cs" />
-    <Compile Include="Config\SysConfig.cs" />
-    <Compile Include="DB\DataMapHelper.cs" />
-    <Compile Include="DB\DbHelper.cs" />
     <Compile Include="DB\Reflection\DynamicMethodEmit.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -69,10 +64,15 @@
     <Compile Include="DB\Reflection\ReflectionExtensions.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="File\ConvertHelper.cs" />
+    <Compile Include="Config\ConfigInit.cs" />
+    <Compile Include="Config\SysConfig.cs" />
+    <Compile Include="DB\DataMapHelper.cs" />
+    <Compile Include="DB\DbHelper.cs" />
     <Compile Include="DB\SQLHelper.cs" />
     <Compile Include="Encrypt\DESEncrypt.cs" />
     <Compile Include="Encrypt\Md5Hash.cs" />
-    <Compile Include="File\FileHelper.cs" />
+    <Compile Include="Config\FileHelper.cs" />
     <Compile Include="File\XmlHelper.cs" />
     <Compile Include="File\JsonHelper.cs" />
     <Compile Include="Log\LogHelper.cs" />
