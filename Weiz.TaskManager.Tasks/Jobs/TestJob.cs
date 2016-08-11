@@ -35,8 +35,6 @@ namespace Weiz.TaskManager.TaskSet
                 JobExecutionException e2 = new JobExecutionException(ex);
                 // 记录异常到数据库和 log 文件中。
                 DbLogHelper.WriteErrorInfo(ex);
-                LogHelper.WriteLog("测试任务异常", ex);
-
                 //true  是立即重新执行任务 
                 e2.RefireImmediately = true;
             }
