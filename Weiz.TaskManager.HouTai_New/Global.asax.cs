@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Weiz.TaskManager.TaskUtility;
-using Weiz.TaskManager.Utility;
+using Weiz.TaskManager.Common;
 
 namespace Weiz.TaskManager.HouTai_New
 {

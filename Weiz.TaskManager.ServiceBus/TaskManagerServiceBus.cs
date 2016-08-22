@@ -7,8 +7,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Data;
+
 using Weiz.TaskManager.TaskUtility;
-using Weiz.TaskManager.Utility;
+using Weiz.TaskManager.Common;
+
 namespace Weiz.TaskManager.ServiceBus
 {
     public class TaskManagerServiceBus

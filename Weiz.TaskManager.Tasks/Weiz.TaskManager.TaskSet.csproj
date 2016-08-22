@@ -74,6 +74,10 @@
       <Project>{e6bce4b6-3e21-47e7-9389-de7336d1c715}</Project>
       <Name>Weiz.TaskManager.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Weiz.TaskManager.Common\Weiz.TaskManager.Common.csproj">
+      <Project>{d2aaedff-9f30-49a6-b242-f655503c24f3}</Project>
+      <Name>Weiz.TaskManager.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Weiz.TaskManager.Models\Weiz.TaskManager.Models.csproj">
       <Project>{51ba0884-31ee-4755-ab0c-4e0e2e3648a7}</Project>
       <Name>Weiz.TaskManager.Models</Name>
@@ -81,10 +85,6 @@
     <ProjectReference Include="..\Weiz.TaskManager.TaskUtility\Weiz.TaskManager.TaskUtility.csproj">
       <Project>{bf6218d8-2e33-48c1-a394-79ce31416982}</Project>
       <Name>Weiz.TaskManager.TaskUtility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Weiz.TaskManager.Utility\Weiz.TaskManager.Utility.csproj">
-      <Project>{d2aaedff-9f30-49a6-b242-f655503c24f3}</Project>
-      <Name>Weiz.TaskManager.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

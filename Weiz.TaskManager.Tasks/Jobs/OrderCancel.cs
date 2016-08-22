@@ -1,13 +1,14 @@
-﻿using Quartz;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
 using Weiz.TaskManager.Models;
 using Weiz.TaskManager.TaskUtility;
-using Weiz.TaskManager.Utility;
+using Weiz.TaskManager.Common;
+using Quartz;
 
 namespace Weiz.TaskManager.TaskSet
 {

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
+
+using Weiz.TaskManager.Common;
 using Weiz.TaskManager.TaskUtility;
-using Weiz.TaskManager.Utility;
 
 namespace Weiz.TaskManager.HouTai_New.Controllers
 {

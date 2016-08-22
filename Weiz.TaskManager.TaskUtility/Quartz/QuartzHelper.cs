@@ -12,7 +12,7 @@ using Quartz.Impl.Calendar;
 using Quartz.Spi;
 using System.Reflection;
 using Quartz.Impl.Matchers;
-using Weiz.TaskManager.Utility;
+using Weiz.TaskManager.Common;
 using Weiz.TaskManager.Models;
 
 namespace Weiz.TaskManager.TaskUtility

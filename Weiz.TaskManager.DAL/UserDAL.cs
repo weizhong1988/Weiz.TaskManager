@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+
 using Weiz.TaskManager.Models;
-using Weiz.TaskManager.Utility;
+using Weiz.TaskManager.Common;
+using Weiz.TaskManager.DBUtility;
 
 namespace Weiz.TaskManager.DAL
 {
