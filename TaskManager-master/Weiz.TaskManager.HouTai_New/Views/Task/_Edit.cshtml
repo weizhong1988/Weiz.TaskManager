@@ -1,0 +1,58 @@
+﻿@using Weiz.TaskManager.Models;
+
+<div class="inp_tablebox mg_t10">
+    <input type="hidden" value="@Model.TaskID" name="TaskID" id="TaskID"/>
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <th width="15%">任务名称：</th>
+            <td width="35%">
+                <input type="text" value="@Model.TaskName" id="TaskName" name="TaskName" class="inpcom w200 require" />
+                <p class="wrong_tips">请输入任务名称</p>
+            </td>
+            <th width="15%">任务参数：</th>
+            <td width="35%">
+                <input type="text" value="@Model.TaskParam" id="TaskParam" name="TaskParam" class="inpcom w200" />
+            </td>
+        </tr>
+        <tr>
+            <th width="15%">程序集名称：</th>
+            <td width="35%">
+                <input type="text" value="@Model.AssemblyName" id="AssemblyName" name="AssemblyName" class="inpcom w200 require" />
+                <p class="wrong_tips">请输入程序集名称</p>
+            </td>
+            <th width="15%">类名(包含命名空间)：</th>
+            <td width="35%">
+                <input type="text" value="@Model.ClassName" id="ClassName" name="ClassName" class="inpcom w200 require" />
+                <p class="wrong_tips">请输入类名</p>
+            </td>
+        </tr>
+
+        <tr>
+            <th width="15%">Cron表达式：</th>
+            <td width="35%">
+                <input type="text" value="@Model.CronExpressionString" id="CronExpressionString" name="CronExpressionString" class="inpcom w200 require" />
+                <p class="wrong_tips">请输入Cron表达式</p>
+            </td>
+            <th width="15%">表达式说明：</th>
+            <td width="35%">
+                <input type="text" value="@Model.CronRemark" id="CronRemark" name="CronRemark" class="inpcom w200" />
+            </td>
+        </tr>
+        <tr>
+            <th width="15%">任务状态：</th>
+            <td width="35%" colspan="3">
+                <div class="radio i-checks">
+                    <label>
+                        <input type="radio" @(Model.Status == TaskStatus.RUN ? "checked" : "")   value="1" name="Status"><i></i>运行
+                       
+                    </label>
+                    <label>
+                        <input type="radio" @(Model.Status == TaskStatus.STOP ? "checked" : "") value="0" name="Status"><i></i>停止
+                       
+                    </label>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+

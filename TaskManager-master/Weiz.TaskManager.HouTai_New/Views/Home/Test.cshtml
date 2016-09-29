@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>管理后台</title>
+    <link type="text/css" rel="stylesheet" href="~/css/common.css" />
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="~/Scripts/common_new.js"></script>
+    <script type="text/javascript" src="~/Scripts/ui/validate.js"></script>
+</head>
+<body>
+    <form>
+        <ul>
+            <li>
+                <input type="text" placeholder="邮箱/手机号码" class="inpcom w160 J_placeholder" name="userName" data-highlight="highlight" />
+            </li>
+            <li class="J_validate"></li>
+        </ul>
+        <input type="submit" id="btnSearch" value="查询"/>
+    </form>
+</body>
+</html>
+<script>
+    $(function () {
+        $('form').validateFn({
+            rules: {
+                userName: {
+                    required: true
+                }
+            },
+            messages: {
+                userName: {
+                    required: 'bitie'
+                }
+            }
+        });
+    });
+</script>

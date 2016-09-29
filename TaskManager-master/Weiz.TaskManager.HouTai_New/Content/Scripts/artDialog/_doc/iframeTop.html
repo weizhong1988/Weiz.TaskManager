@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>artDialog</title>
+<script src="../artDialog.source.js?skin=default"></script>
+<script src="../plugins/iframeTools.source.js"></script>
+<style>
+html, body {
+	height:100%;
+	margin:0;
+	padding:0;
+	font-size:14px;
+	font-family:'Microsoft Yahei', Tahoma, Arial!important; font-family:'宋体', Tahoma, Arial;
+	overflow:auto;
+}
+a { color: #27d; text-decoration: none; }
+#doc { widows:100%; height:100%; position:relative; z-index:1; overflow:hidden;}
+#sideBar { float:left; width:228px; height:100%; border-right:solid 1px #CCC; overflow:auto; }
+#main {
+	margin-left:230px;
+	height:100%;
+}
+#main iframe {
+	width:100%;
+	height:100%;
+	border:none 0;
+}
+#main .tips { height:2em; text-indent:2em; line-height:2em; color:#FFF; background:#030; font-weight:bold; }
+.sideBarWrap { padding:10px; }
+#sideBar .content { margin:5px; }
+#sideBar .content p { padding:0; margin:0; padding-bottom:15px; }
+#sideBar .close { line-height:2em; text-align:center; background:#F4F4F4; border-bottom:1px solid #D8D8D8; color:#333; }
+#photo { text-align:center; }
+#photo img { margin-top:15px;}
+#sideBar .nav { padding:5px; margin:15px 0; border:1px solid #D8D8D8; background:#F4F4F4; }
+#sideBar .nav a { padding:1px; }
+#sideBar .nav a:hover { background:#27d; color:#FFF; text-decoration:none; }
+#sideBar .btns { padding-bottom:15px; text-align:center; }
+.gotop { position:absolute; right:17px; bottom:60px; z-index:9; }
+</style>
+</head>
+
+<body>
+<div id="doc">
+<div id="sideBar">
+	<div class="close"><a href="plugin.iframe.html" target="_blank">关闭框架查看</a></div>
+    <div class="sideBarWrap">
+    <div id="photo"></div>
+    <div class="nav"><a href="plugin.iframe.html#top" target="iframe">top</a> <a href="plugin.iframe.html#opener" target="iframe">opener</a> <a href="plugin.iframe.html#open" target="iframe">open</a> <a href="plugin.iframe.html#data" target="iframe">data</a> <a href="plugin.iframe.html#load" target="iframe">load</a> <a href="plugin.iframe.html#alert" target="iframe">alert</a> <a href="plugin.iframe.html#confirm" target="iframe">confirm</a> <a href="plugin.iframe.html#prompt" target="iframe">prompt</a> <a href="plugin.iframe.html#tips" target="iframe">tips</a></div>
+    <div class="btns">
+      <button id="open">iframe弹出</button>
+      <button id="move">移动</button>
+      <button id="close">关闭</button>
+    </div>
+	<div class="content">
+    <p>
+    当前页面右侧是iframe套嵌的页面。对话框可以自由穿越框架进行展示，开发者几乎无需考虑层级关系即可进行跨框架操作DOM。</p>
+    <p>artDialog如果要支持框架集穿越的话，需要用iframe页面套住框架集：<a href="iframe_frameset.html" target="_blank">见这里</a></p>
+    </div>
+       <input disabled id="testInput" title="testInput" type="text" />
+    </div>
+
+</div>
+<div id="main">
+  <iframe id="iframe" name="iframe" src="plugin.iframe.html"></iframe>
+  <a class="gotop" title="返回顶部" href="plugin.iframe.html#header" target="iframe">{top}</a> 
+</div>
+<script type="text/javascript">
+var test, iframe = document.getElementById('iframe');
+document.getElementById('open').onclick = function(){
+	var iframeWindow = iframe.contentWindow;
+	test = iframeWindow.art.dialog({
+		lock: true,
+		content: '人品极度不稳定的时刻到了！'
+	});
+}
+document.getElementById('move').onclick = function(){
+	test && test.position('50%', '5%');
+}
+document.getElementById('close').onclick = function(){
+	test && test.close();
+	test = null;
+}
+
+var _hash = window.location.hash
+if (_hash) {
+	_hash = _hash.split('#')[1];
+	if (_hash) iframe.src = 'plugin.iframe.html#' + _hash;
+};
+</script>
+</div>
+</body>
+</html>

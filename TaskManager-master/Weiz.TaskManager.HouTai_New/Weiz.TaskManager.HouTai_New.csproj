@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E8A7E36-388B-4430-8995-82FBFAC3DFF4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weiz.TaskManager.HouTai_New</RootNamespace>
+    <AssemblyName>Weiz.TaskManager.HouTai_New</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Css\cron.css" />
+    <Content Include="Content\Css\common.css" />
+    <Content Include="Content\Css\mlg_admin.css" />
+    <Content Include="Content\Images\404.png" />
+    <Content Include="Content\Images\add_sprit1.png" />
+    <Content Include="Content\Images\ad_sprit_icon.png" />
+    <Content Include="Content\Images\answer_icon.png" />
+    <Content Include="Content\Images\bd_bg.png" />
+    <Content Include="Content\Images\breadclip.png" />
+    <Content Include="Content\Images\btn_close.png" />
+    <Content Include="Content\Images\channel_icon.png" />
+    <Content Include="Content\Images\chartlet_btn.png" />
+    <Content Include="Content\Images\chat_bg.gif" />
+    <Content Include="Content\Images\chat_bg.png" />
+    <Content Include="Content\Images\check_bg.jpg" />
+    <Content Include="Content\Images\close_icon.png" />
+    <Content Include="Content\Images\close_icon2.png" />
+    <Content Include="Content\Images\close_icon3.png" />
+    <Content Include="Content\Images\footer_logo.png" />
+    <Content Include="Content\Images\guide_bg.png" />
+    <Content Include="Content\Images\hg.png" />
+    <Content Include="Content\Images\jt1.png" />
+    <Content Include="Content\Images\jt2.png" />
+    <Content Include="Content\Images\jt3.png" />
+    <Content Include="Content\Images\jt4.gif" />
+    <Content Include="Content\Images\jygz.png" />
+    <Content Include="Content\Images\leftTopBg.png" />
+    <Content Include="Content\Images\levelIcon.png" />
+    <Content Include="Content\Images\lightbox_close.gif" />
+    <Content Include="Content\Images\lightbox_close1.gif" />
+    <Content Include="Content\Images\loading_big.gif" />
+    <Content Include="Content\Images\loading_fashion.jpg" />
+    <Content Include="Content\Images\login_bg.jpg" />
+    <Content Include="Content\Images\logoAdmin.png" />
+    <Content Include="Content\Images\mainBg1.png" />
+    <Content Include="Content\Images\mainBg2.png" />
+    <Content Include="Content\Images\material_img1.png" />
+    <Content Include="Content\Images\material_img2.png" />
+    <Content Include="Content\Images\material_img3.png" />
+    <Content Include="Content\Images\material_img4.png" />
+    <Content Include="Content\Images\menuIcon.png" />
+    <Content Include="Content\Images\model_icon.jpg" />
+    <Content Include="Content\Images\nav_line.png" />
+    <Content Include="Content\Images\op_model_error_small.png" />
+    <Content Include="Content\Images\op_model_init_small.png" />
+    <Content Include="Content\Images\pay_img1.png" />
+    <Content Include="Content\Images\play_icon.gif" />
+    <Content Include="Content\Images\search_icon.png" />
+    <Content Include="Content\Images\search_result_bg.png" />
+    <Content Include="Content\Images\selected.png" />
+    <Content Include="Content\Images\select_jt.png" />
+    <Content Include="Content\Images\sjSltBg.png" />
+    <Content Include="Content\Images\space.gif" />
+    <Content Include="Content\Images\sprit.png" />
+    <Content Include="Content\Images\sprite.png" />
+    <Content Include="Content\Images\sprites128.png" />
+    <Content Include="Content\Images\sprites40.png" />
+    <Content Include="Content\Images\sprit_icon.png" />
+    <Content Include="Content\Images\sprit_sj.png" />
+    <Content Include="Content\Images\star_bg.png" />
+    <Content Include="Content\Images\test1.png" />
+    <Content Include="Content\Images\tip_icon.png" />
+    <Content Include="Content\Images\upfile_img.png" />
+    <Content Include="Content\Scripts\artDialog\artDialog.js" />
+    <Content Include="Content\Scripts\artDialog\artDialog.source.js" />
+    <Content Include="Content\Scripts\artDialog\plugins\iframeTools.js" />
+    <Content Include="Content\Scripts\artDialog\plugins\iframeTools.source.js" />
+    <Content Include="Content\Scripts\artDialog\skins\aero.css" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\aero_s.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\aero_s2.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_close.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_e.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_n.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_ne.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_nw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_s.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_se.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_sw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="Content\Scripts\artDialog\skins\aero\ie6\aui_w.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black.css" />
+    <Content Include="Content\Scripts\artDialog\skins\black\bg.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\bg2.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\bg_css3.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\bg_css3_2.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\close.hover.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\close.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\e.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\n.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\ne.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\nw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\s.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\se.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\sw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\black\ie6\w.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue.css" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\bg.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\bg2.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\bg_css3.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\bg_css3_2.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\close.hover.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\close.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\e.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\n.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\ne.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\nw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\s.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\se.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\sw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\blue\ie6\w.png" />
+    <Content Include="Content\Scripts\artDialog\skins\chrome.css" />
+    <Content Include="Content\Scripts\artDialog\skins\chrome\border.png" />
+    <Content Include="Content\Scripts\artDialog\skins\chrome\chrome_s.png" />
+    <Content Include="Content\Scripts\artDialog\skins\default.css" />
+    <Content Include="Content\Scripts\artDialog\skins\green.css" />
+    <Content Include="Content\Scripts\artDialog\skins\green\bg.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\bg2.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\bg_css3.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\bg_css3_2.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\color_bg.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\close.hover.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\close.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\e.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\n.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\ne.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\nw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\s.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\se.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\sw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\green\ie6\w.png" />
+    <Content Include="Content\Scripts\artDialog\skins\icons\error.png" />
+    <Content Include="Content\Scripts\artDialog\skins\icons\face-sad.png" />
+    <Content Include="Content\Scripts\artDialog\skins\icons\face-smile.png" />
+    <Content Include="Content\Scripts\artDialog\skins\icons\loading.gif" />
+    <Content Include="Content\Scripts\artDialog\skins\icons\question.png" />
+    <Content Include="Content\Scripts\artDialog\skins\icons\succeed.png" />
+    <Content Include="Content\Scripts\artDialog\skins\icons\warning.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog.css" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\idialog_s.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\idialog_s2.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_close.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_e.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_n.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_s.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_se.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\idialog\ie6\aui_w.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera.css" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_close.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_e.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_n.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_ne.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_nw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_s.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_se.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_sw.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\ie6\aui_w.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\s1.png" />
+    <Content Include="Content\Scripts\artDialog\skins\opera\s2.png" />
+    <Content Include="Content\Scripts\artDialog\skins\simple.css" />
+    <Content Include="Content\Scripts\artDialog\skins\twitter.css" />
+    <Content Include="Content\Scripts\artDialog\_doc\ajaxContent\content.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\ajaxContent\googleMaps.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\ajaxContent\login.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\API.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\demo.css" />
+    <Content Include="Content\Scripts\artDialog\_doc\demo.js" />
+    <Content Include="Content\Scripts\artDialog\_doc\down.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\frameset.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\googleMaps.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\helloWorld.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\highlight\AUTHORS.en.txt" />
+    <Content Include="Content\Scripts\artDialog\_doc\highlight\export.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\highlight\highlight.js" />
+    <Content Include="Content\Scripts\artDialog\_doc\highlight\highlight.pack.js" />
+    <Content Include="Content\Scripts\artDialog\_doc\highlight\languages\javascript.js" />
+    <Content Include="Content\Scripts\artDialog\_doc\highlight\readme.eng.txt" />
+    <Content Include="Content\Scripts\artDialog\_doc\highlight\styles\magula.css" />
+    <Content Include="Content\Scripts\artDialog\_doc\highlight\test.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\iframe.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\iframeA.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\iframeB.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\iframeTop.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\iframe_frameset.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\images\alipay.jpg" />
+    <Content Include="Content\Scripts\artDialog\_doc\images\bg.png" />
+    <Content Include="Content\Scripts\artDialog\_doc\images\bottom.png" />
+    <Content Include="Content\Scripts\artDialog\_doc\images\doc.png" />
+    <Content Include="Content\Scripts\artDialog\_doc\images\lixiaolong.png" />
+    <Content Include="Content\Scripts\artDialog\_doc\images\logo.png" />
+    <Content Include="Content\Scripts\artDialog\_doc\images\opensource.gif" />
+    <Content Include="Content\Scripts\artDialog\_doc\images\photo.jpg" />
+    <Content Include="Content\Scripts\artDialog\_doc\images\text.png" />
+    <Content Include="Content\Scripts\artDialog\_doc\labs.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\license.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\log.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\login_iframe.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\login_iframe_2.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\new.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\plugin.iframe.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\topFrame.html" />
+    <Content Include="Content\Scripts\artDialog\_doc\upd.txt" />
+    <Content Include="Content\Scripts\jquery-1.7.1.js" />
+    <Content Include="Content\Scripts\My97DatePicker\calendar.js" />
+    <Content Include="Content\Scripts\Grid.js" />
+    <Content Include="Content\Scripts\My97DatePicker\lang\en.js" />
+    <Content Include="Content\Scripts\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Content\Scripts\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Content\Scripts\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Content\Scripts\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Content\Scripts\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Content\Scripts\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Content\Scripts\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Content\Scripts\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Content\Scripts\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Content\Scripts\My97DatePicker\WdatePicker.js" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\readme.txt" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="Content\Scripts\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Content\Scripts\cron-expression.js" />
+    <Content Include="cron.html" />
+    <Content Include="demo.html" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\matLogo.png" />
+    <Content Include="demo2.htm" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="tab.html" />
+    <Content Include="tab2.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CronController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlHelpers\FPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Content\Scripts\artDialog\_doc\ajaxContent\content.json" />
+    <Content Include="Content\Scripts\artDialog\_doc\commercial_license.doc" />
+    <Content Include="Content\Scripts\artDialog\_doc\highlight\LICENSE" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\SideBarMenu.cshtml" />
+    <Content Include="Views\Shared\UserNav.cshtml" />
+    <Content Include="Views\Shared\_FooterPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Cron\Index.cshtml" />
+    <Content Include="Views\Task\_Edit.cshtml" />
+    <Content Include="Views\Task\Grid.cshtml" />
+    <Content Include="Config\Config.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Log\RunLog.cshtml" />
+    <Content Include="Views\Log\ErrorLog.cshtml" />
+    <Content Include="Views\User\List.cshtml" />
+    <None Include="Properties\PublishProfiles\11111.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Weiz.TaskManager.BLL\Weiz.TaskManager.BLL.csproj">
+      <Project>{e6bce4b6-3e21-47e7-9389-de7336d1c715}</Project>
+      <Name>Weiz.TaskManager.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weiz.TaskManager.Common\Weiz.TaskManager.Common.csproj">
+      <Project>{d2aaedff-9f30-49a6-b242-f655503c24f3}</Project>
+      <Name>Weiz.TaskManager.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weiz.TaskManager.Models\Weiz.TaskManager.Models.csproj">
+      <Project>{51ba0884-31ee-4755-ab0c-4e0e2e3648a7}</Project>
+      <Name>Weiz.TaskManager.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weiz.TaskManager.TaskUtility\Weiz.TaskManager.TaskUtility.csproj">
+      <Project>{bf6218d8-2e33-48c1-a394-79ce31416982}</Project>
+      <Name>Weiz.TaskManager.TaskUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60798</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9056/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://task.fpeach.com</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>Weiz 任务管理平台</title>
+    <meta name="renderer" content="ie-stand" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/Content/Css/common.css" rel="stylesheet" />
+    <link href="/Content/Css/mlg_admin.css" rel="stylesheet" />
+    <link href="/Content/Scripts/artDialog/skins/default.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/Content/Scripts/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/artDialog/artDialog.js"></script>
+</head>
+<body>
+    <!--菜单测试开始-->
+    <div class="leftSj">
+        <div class="leftTop">
+            <img src="/Content/Images/logo.png" />
+        </div>
+        <div class="leftMenu">
+            @Html.Partial("SideBarMenu")
+        </div>
+    </div>
+
+    <div class="mainSjOut">
+        <div class="mainSjIn">
+            <!--顶部导航-->
+            @Html.Partial("UserNav")
+            <div class="mainBody">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <div class="footerSj">
+        © 2013 - 2014 Weiz 版权所有
+    </div>
+    <input id="hd_PageName" value="@ViewBag.PageName" type="hidden" />
+</body>
+</html>

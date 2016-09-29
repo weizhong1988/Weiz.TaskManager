@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>artDialog iframe Tools</title>
+<style>
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; }
+body { font-family:  'Microsoft Yahei', Tahoma, Arial !important; font-family:  Tahoma, Arial; line-height:1.75; }
+strong, em, b, i { font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif; }
+h1, .site-title, h2, h3 { font-family:  'Microsoft Yahei', Tahoma, Arial !important; font-family:  Tahoma, Arial; }
+h4, h5, h6 { font-family: Verdana, sans-serif; }
+body { font-size: 14px; color: #444; background: #eee; text-align: center; }
+p { padding:8px 0; }
+#page { background: white; }
+#page { max-width:760px; _width: 700px; text-align: left; margin: 0 auto; padding-top: 20px; position: relative; border: 1px solid #ddd; border-top: none; clear: both; background-color:#FFF; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; -moz-box-shadow:0 0 3px rgba(0, 0, 0, .1); -webkit-box-shadow::0 0 3px rgba(0, 0, 0, .1);
+box-shadow::0 0 3px rgba(0, 0, 0, .1);
+}
+#header { position: relative; height: 200px; background: #3371A3; background-position: top right; background-repeat: no-repeat; overflow: hidden; }
+.content { padding: 0 20px 30px; }
+html, body { _overflow-x:hidden }
+pre { line-height:1.3em!important; font:12px!important; *zoom:1;
+}
+h1 { font-size: 26px; }
+h3 { padding:10px 0; margin-top:36px; margin-bottom:8px; text-indent:0; border-radius:5px; font-size:18px; }
+.site-title { font-size: 36px; font-weight: bold; padding: 48px 40px 0; }
+.site-title a, #header .description { text-decoration: none; color: white; font-family:'Constantia'; text-shadow:0 0 1px rgba(0, 0, 0, .8); }
+.site-title a:hover { text-decoration: underline; }
+#header .description { font-size: 12px; margin: 0 40px; text-shadow:none; }
+#header .description a { color:#FFF; }
+h2 { font-size: 18px; }
+#footer { clear: both; margin: 0 auto; padding: 20px 0 40px; text-align: center; color: #777; }
+#footer p { line-height: 1.6em; }
+#footer a { color: #888; font-weight: bold; }
+#footer a:hover { border: none; text-decoration: none; color: #000; }
+a:hover, a:visited:hover { text-decoration: underline; }
+h2 a:hover, h2 span a:hover { color: #27d !important; }
+a { color: #27d; text-decoration: none; }
+.msg {
+*zoom:1; padding:15px; margin-top:15px; font-size:14px; background:#EEF7F5; border:1px solid #D7EAE2; color:#333; }
+.msg ol { margin:0 20px; }
+.msg { font-size:14px; }
+/*各行变色表格*/
+table.zebra, .zebra th, .zebra td { border-width: 1px; border-style: solid; margin: 0; font-family:'Microsoft Yahei', Tahoma, Arial!important; font-family:'宋体', Tahoma, Arial; }
+table.zebra { table-layout: fixed; width: 100%; margin-bottom: 6px; padding: 0 1px 1px 0; border-spacing: 0; border-collapse: separate; *border-collapse:collapse;
+border-color: #abb8ce; background: #EDEDED; }
+.zebra th { padding: 5px 4px; font-weight: bold; border-color: #f8f8f8 #abb8ce #abb8ce #f8f8f8; text-align: left; text-shadow: 1px 1px 0 #e4edfb; vertical-align: middle; background: #d0dbee; }
+.zebra thead th { text-align:center; }
+.zebra th strong { color:#090; border-bottom:1px dashed #090; text-decoration:underline; }
+.zebra td { padding:0; }
+.zebra th.separate { text-align:center; border-color: #E1F196 #AECD1B #AECD1B #F3FAD6; background-color: #f3f7fd; }
+.zebra td { padding: 4px; font: 12px/18px Consolas, "Courier New", Courier, monospace; text-align: left; vertical-align: top; }
+.zebra td { border-color: #f8f8f8 #abb8ce #abb8ce #f8f8f8; background: #e0e8f5; }
+.zebra tr.odd th { background: #dbe4f4; }
+.zebra tr.odd td { background: #e6eef9; }
+.zebra br { margin-bottom:1.8em; }
+table.zebra .parameter, table.zebra .type, table.zebra .default { width:7em; }
+</style>
+<script>
+// skin demo
+(function() {
+	var _skin, _jQuery;
+	var _search = window.location.search;
+	if (_search) {
+		_skin = _search.split('demoSkin=')[1];
+		_jQuery = _search.indexOf('jQuery=true') !== -1;
+		if (_jQuery) document.write('<scr'+'ipt src="../jquery-1.6.2.min.js"></sc'+'ript>');
+	};
+	
+	document.write('<scr'+'ipt src="../artDialog.source.js?skin=' + (_skin || 'default') +'"></sc'+'ript>');
+	window._isDemoSkin = !!_skin;	
+	window.onload = function () {
+		_skin && art.dialog({
+			content: '欢迎使用"artDialog"对话框组件!',
+			icon: 'succeed',
+			fixed: true
+		}, function () {
+			this.title('2秒后自动关闭').lock().time(2);
+			return false;
+		});
+	};
+})();
+</script>
+<script src="../plugins/iframeTools.source.js"></script>
+<script src="demo.js"></script>
+<script src="highlight/highlight.pack.js"></script>
+<script src="highlight/languages/javascript.js"></script>
+<script>
+hljs.tabReplace = '    ';
+hljs.initHighlightingOnLoad();
+</script>
+<link rel="stylesheet" href="highlight/styles/magula.css">
+</head>
+
+<body>
+<div id="page">
+  <div id="header">
+    <div class='site-title'> <a href="?" accesskey="1">artDialog<span style=" margin-left:10px; font-size:12px; font-weight:bold;">iframe Tools</span></a> </div>
+    <p class="description"><a href="../index.html" target="_blank">返回首页</a> | <a href="iframeTop.html" target="_top">在框架中演示本页面</a></p>
+  </div>
+  <div class="content">
+    <div id="primary-wrapper">
+      
+<table class="zebra" style="margin-top:20px;">
+      <colgroup>
+      <col class="col1" />
+      <col class="col2" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="name" style="width:22em">名称</th>
+          <th class="note" colspan="3">描述</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="separate" colspan="4"><abbrev>核心方法</abbrev></th>
+        </tr>
+        <tr class="odd">
+          <th><a href="#top">art.dialog.top</a></th>
+          <td colspan="3">获取artDialog可用最高层window对象。这与直接使用window.top不同，它能排除artDialog对象不存在已经或者顶层页面为框架集的情况<br />
+            这是iframe应用工具集中的核心方法，你可以用它来操作父页面对象（包括上面的对话框）</td>
+        </tr>
+        <tr>
+          <th><a href="#data">art.dialog.data(name, value)</a></th>
+          <td colspan="3">跨框架数据共享写入接口。<br />框架与框架之间以及与主页面之间进行数据交换是非常头疼的事情，常规情况下你必须知道框架的名称才能进行数据交换，如果是在复杂的多层框架下操作简直就是噩梦。<br />而data方法就是为了解决这个问题，你完全不用管框架层级问题，它可以写入任何类型的数据，而做到各个页面之间数据共享。</td>
+        </tr>
+        <tr class="odd">
+          <th><a href="#data">art.dialog.data(name)</a></th>
+          <td colspan="3">跨框架数据共享读取接口。指定name即返回数据，任何引用了artDialog的页面都有效</td>
+        </tr>
+        <tr>
+          <th><a href="#removeData">art.dialog.removeData(name)</a></th>
+          <td colspan="3">跨框架数据共享删除接口。删除指定名称的数据，任何引用了artDialog的页面都有效</td>
+        </tr>
+        <tr>
+          <th class="separate" colspan="4"><abbrev>异步数据对话框</abbrev></th>
+        </tr>
+        <tr class="odd">
+          <th><a href="#open">art.dialog.open(url, options, cache)</a></th>
+          <td colspan="3">创建一个iframe页面<br />
+            参数: 地址, 配置参数, 缓存开关(默认true)</td>
+        </tr>
+        <tr>
+          <th><a href="#api">art.dialog.open.api</a></th>
+          <td colspan="3">iframe页面获取open方法扩展方法。 <br />(注意这个iframe中也必须引用artDialog脚本文件)</td>
+        </tr>
+        <tr class="odd">
+          <th><a href="#opener">art.dialog.opener</a></th>
+          <td colspan="3">iframe页面获取open方法触发来源页面window对象。 <br />(注意这个iframe中也必须引用artDialog脚本文件)</td>
+        </tr>
+        <tr>
+          <th><a href="#close">art.dialog.close()</a></th>
+          <td colspan="3">iframe页面关闭open方法创建的对话框的快捷方式。<br />close方法等同于：<div>var api = art.dialog.open.api;</div><div>api && api.close();</div><br />(注意这个iframe中也必须引用artDialog脚本文件)</td>
+        </tr>
+        <tr class="odd">
+          <th><a href="#load">art.dialog.load(url, options, cache)</a></th>
+          <td colspan="3">Ajax加载内容<br />
+            参数：地址, 配置参数, 缓存开关(默认true)</td>
+        </tr>
+        <tr>
+          <th class="separate" colspan="4"><abbrev>基础交互对话框</abbrev></th>
+        </tr>
+        <tr>
+          <th><a href="#alert">art.dialog.alert(content, callback)</a></th>
+          <td colspan="3">警告消息 (同时只允许一个alert)<br />
+            参数: 内容, 对话框关闭后的回调函数</td>
+        </tr>
+        <tr class="odd">
+          <th><a href="#confirm">art.dialog.confirm(content, ok, cancel)</a></th>
+          <td colspan="3">确认 (同时只允许一个confirm)<br />
+            参数: 内容, 确定按钮回调函数, 取消按钮回调函数</td>
+        </tr>
+        <tr>
+          <th><a href="#prompt">art.dialog.prompt(content, ok, value)</a></th>
+          <td colspan="3">提问 (同时只允许一个prompt)<br />
+            参数: 内容, 确定按钮回调函数, 文本框默认值</td>
+        </tr>
+        <tr>
+          <th><a href="#tips">art.dialog.tips(content, time)</a></th>
+          <td colspan="3">短暂提示(同时只允许一个tips)<br />
+            参数: 内容、显示时间(单位秒, 默认1.5)</td>
+        </tr>
+        <tr>
+          <th class="separate" colspan="4"><abbrev>自定义</abbrev></th>
+        </tr>
+        <tr>
+          <th><a href="#through">art.dialog.through(options)</a></th>
+          <td colspan="3">创建一个普通可穿越框架的对话框<br />
+            不鼓励直接使用window.top这样的方式穿越，这样可能因为对话框触发页面重置导致其创建的对象在内存中被清空而发生异常</td>
+        </tr> 
+      </tbody>
+    </table>
+<div class="msg">
+        <ol>
+          <li>顶层面需要引用了artDialog才能实现穿越框架</li>
+          <li>chrome浏览器本地运行会有安全限制，请在服务器上查看本页面</li>
+          <li>artDialog不支持怪异模式，请用主流网站采用的XHTML1.0或者HTML5的DOCTYPE申明，如：<br>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br>或者<br>&lt;!DOCTYPE HTML&gt;</li>
+        </ol>
+      </div>
+      <div id="demo">
+        <h3 id="top">获取artDialog可用顶层页面window对象[top]</h3>
+        art.dialog.top默认引用的是widnow.top（如果window.top是框架集、跨域、artDialog对象不存，否则可能为window.parent或者当前window）这里页面所有穿越的对话框最终是在这个window上。
+        </p>
+        <div id="DOM-top">
+          <pre><code class="javascript">var win = art.dialog.top;
+win.document.title = '我修改了页面标题';
+win.document.getElementById('testInput').value = 'hello world!';
+</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" id="btn8" title="btn8" name="DOM-top">运行&raquo;</button>
+        </p>
+        <h3 id="through">可穿越框架的标准对话框[through]</h3>
+        <p>如果iframe刷新或者被关闭，它创建的对话框会自动回收，防止因内存清空而导致错误。不鼓励直接使用window.top.art.dialog()与art.dialog.top.art.dialog()这样的方式穿越框架，它们会带来潜在的错误。</p>
+        <div id="demoCode-through">
+          <pre><code class="javascript">var throughBox = art.dialog.through;
+throughBox({
+	content: '我是一个普通的对话框，只是能穿越框架而已',
+    lock: true
+});
+</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" id="btn8" title="btn8" name="demoCode-through">运行&raquo;</button>
+        </p>
+        <h3 id="open">嵌入网页[open] <span id="api"></span><span id="opener"></span></h3>
+        <p>同域下能够自适应iframe大小，但chrome 浏览器本地运行会认为跨域而无法适应大小 </p>
+        <p>open方法有如下这几个私有个功能</p>
+        <table class="zebra">
+          <colgroup>
+          <col class="col1">
+          <col class="col2">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="name" style="width:22em">名称</th>
+              <th class="note">类型</th>
+              <th class="note" colspan="3">描述</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="separate" colspan="5">iframe内部静态方法</th>
+            </tr>
+            <tr class="odd">
+              <th>art.dialog.open.api</th>
+              <td>Object</td>
+              <td colspan="3">从iframe页面引用对话框扩展方法</td>
+            </tr>
+            <tr>
+              <th>art.dialog.opener </th>
+              <td>object Window</td>
+              <td colspan="3">从iframe页面引用对话框触发页面的window</td>
+            </tr>
+            <tr>
+              <th class="separate" colspan="5"><abbrev>扩展方法</abbrev></th>
+            </tr>
+            <tr>
+              <th>iframe</th>
+              <td>HTMLElement</td>
+              <td colspan="3">引用open创建的iframe（4.0.1新增）</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>其他扩展方法：<a href="API.html#API" target="_blank">API.html#API</a></p>
+        <h4>一、使用iframe内部脚本控制对话框</h4>
+        <p>请打开 <a href="login_iframe.html" target="_blank">login_iframe.html</a> 查看源码</p>
+        <div id="demoCode04">
+          <pre><code class="javascript">art.dialog.open('login_iframe.html', {title: '提示'});</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" id="btn4" title="btn4" name="demoCode04">运行&raquo;</button>
+        </p>
+        <!--<p>google maps (示例来自KindEditor)</p>
+        <div id="demoCode04-5">
+          <pre><code class="javascript">art.dialog.open('googleMaps.html');</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" name="demoCode04-5">运行&raquo;</button>
+        </p> -->
+        <h4>二、在外部对iframe进行控制</h4>
+        <p>对iframe控制需要用到open私有的this.iframe扩展方法：</p>
+        <div id="demoCode04-2">
+          <pre><code class="javascript">art.dialog.open('login_iframe_2.html', {
+    title: '登录',
+	// 在open()方法中，init会等待iframe加载完毕后执行
+	init: function () {
+    	var iframe = this.iframe.contentWindow;
+    	var top = art.dialog.top;// 引用顶层页面window对象
+        var username = iframe.document.getElementById('login-form-username');
+        username.value = 'guest';
+        setTimeout(function () {
+        	username.select();
+        }, 80);
+        top.document.title = '测试';
+    },
+    ok: function () {
+    	var iframe = this.iframe.contentWindow;
+    	if (!iframe.document.body) {
+        	alert('iframe还没加载完毕呢')
+        	return false;
+        };
+    	var form = iframe.document.getElementById('login-form'),
+            username = iframe.document.getElementById('login-form-username'),
+    		password = iframe.document.getElementById('login-form-password');
+		if (check(username) && check(password)) form.submit();
+       	return false;
+    },
+    cancel: true
+});
+
+// 表单验证
+var check = function (input) {
+	if (input.value === '') {
+		inputError(input);
+		input.focus();
+		return false;
+	} else {
+		return true;
+	};
+};
+
+// 输入错误提示
+var inputError = function (input) {
+	clearTimeout(inputError.timer);
+	var num = 0;
+	var fn = function () {
+		inputError.timer = setTimeout(function () {
+			input.className = input.className === '' ? 'login-form-error' : '';
+			if (num === 5) {
+				input.className === '';
+			} else {
+				fn(num ++);
+			};
+		}, 150);
+	};
+	fn();
+};
+</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" name="demoCode04-2">运行&raquo;</button>
+        </p>
+        <h4>三、跨域访问</h4>
+        <p>跨域访问无法自适应大小，也无法进行父页面与子页面数据交换</p>
+        <div id="demoCode_open_domain">
+          <pre><code class="javascript">art.dialog.open('http://www.connect.renren.com/igadget/renren/index.html',
+	{title: '人人网', width: 320, height: 400});</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" name="demoCode_open_domain">运行&raquo;</button>
+        </p>
+        <h2 id="data" style="color:#00C">框架与框架、主页面数据共享[data &amp; removeData]</h2>
+        <p>框架与框架之间以及与主页面之间进行数据交换是非常头疼的事情，常规情况下你必须知道框架的名称才能进行数据交换，如果是在复杂的多层框架下操作简直就是开发人员噩梦，而这样的问题在CMS多框架应用中十分常见。</p>
+        <p>在artDialog中这一切完全被简化，它有一个简单易用的数据共享接口，可以共享任意类型的数据供各个框架页面读取，它与页面名称、层级毫无关系。<a href="http://www.planeart.cn/?p=1554" target="_blank">相关原理</a></p>
+        <p>请打开 <a href="iframeA.html" target="_blank">iframeA.html</a> 源码查看范例。由于art.dialog.open方法打开的iframe加剧了框架的层级的复杂性，所以请特别重视这个data方法！</p>
+        <div id="demoCode04-3">
+          <pre><code class="javascript">art.dialog.data('test', document.getElementById('demoInput04-3').value);
+art.dialog.open('iframeA.html', null, false);
+
+// 此时 iframeA.html 页面可以使用 art.dialog.data('test') 获取到数据，如：
+// document.getElementById('aInput').value = art.dialog.data('test');
+</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" name="demoCode04-3">运行&raquo;</button>
+          <input id="demoInput04-3" title="demoInput04-3" type="text" value="数据共享机制" style="padding:4px; width:16em" />
+          （请输入测试文字） 
+          <script>var _data = art.dialog.data('iframeTools'); if (_data) document.getElementById('demoInput04-3').value = _data;</script> 
+        </p>
+        <h3 id="load">Ajax[load]</h3>
+        <p>特别说明：第三个参数为ajax缓存开关，默认为true。由于浏览器限制，ajax需要在服务端运行才能正确运行本例子。</p>
+        <h4>一、加载网页片段</h4>
+        <div id="demoCode05">
+          <pre><code class="javascript">art.dialog.load('./ajaxContent/content.html', {
+	title: '远程载入HTML片段',
+	ok: function(topWin){
+    	art.dialog('hello world');
+    },
+	close: function(){
+    	art.dialog.tips('close')
+    }
+}, false);</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" id="btn5" title="btn5" name="demoCode05">运行&raquo;</button>
+        </p>
+        <div id="demoCode05-2">
+          <pre><code class="javascript">art.dialog.load('./ajaxContent/login.html', false);</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" id="btn5" title="btn5" name="demoCode05-2">运行&raquo;</button>
+        </p>
+        <h3 id="alert">警告消息[alert]</h3>
+        <div id="demoCode01">
+          <pre><code class="javascript">art.dialog.alert('警察叔叔会请你喝茶！', function () {alert(0)});</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" name="demoCode01">运行&raquo;</button>
+        </p>
+        <h3 id="confirm">确认消息[confirm]</h3>
+        <div></div>
+        <div id="demoCode02">
+          <pre><code class="javascript">art.dialog.confirm('你确认删除操作？', function(){
+	var top = art.dialog.top,
+		input = document.getElementById('demoInput02'),
+		photo = top.document.getElementById('photo');
+		
+	if (input) input.parentNode.removeChild(input);
+	if (photo) photo.innerHTML = '&lt;img src="images/lixiaolong.png" /&gt;';
+}, function(){
+	art.dialog.tips('你取消了操作');
+});</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" name="demoCode02">运行&raquo;</button>
+          <button disabled id="demoInput02" title="demoInput02">点运行按钮删掉我</button>
+        </p>
+        <h3 id="prompt">提问消息[prompt]</h3>
+        <p>特别说明：回调函数第一个参数为输入的值</p>
+        <div id="demoCode03">
+          <pre><code class="javascript">art.dialog.prompt('你的名字是什么？', function(data){
+	// data 代表输入数据;
+	var input = document.getElementById('demoInput03'),
+		topVal = art.dialog.top.document.getElementById('testInput');
+	if (input) input.value = data;
+	if (topVal) topVal.value = data;
+}, '我是糖饼');</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" name="demoCode03">运行&raquo;</button>
+          <input disabled id="demoInput03" title="demoInput03" type="text" />
+        </p>
+        <h3 id="tips">提示消息[tips]</h3>
+        <div id="demoCode07">
+          <pre><code class="javascript">art.dialog.tips('提交成功！', 1.5);</code></pre>
+        </div>
+        <p class="buttons">
+          <button class="runCode" name="demoCode07">运行&raquo;</button>
+        </p>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div id="footer">
+  <p>(C)2010~2011</p>
+</div>
+</div>
+</body>
+</html>

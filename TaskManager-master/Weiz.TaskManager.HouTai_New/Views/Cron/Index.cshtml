@@ -1,0 +1,467 @@
+﻿<div class="breadclip">
+    <i class="homeIcon inline"></i><a href="#">首页</a><a href="#">Cron表达式</a>生成Cron表达式
+</div>
+
+<div class="pd20">
+    <form method="post" action="" id="crontab-form">
+        <div id="tabs1">
+            <div class="menu1box">
+                <ul id="menu1">
+                    <li class="hover" data-value="0"><a href="javascript:void(0)">秒</a></li>
+                    <li data-value="1"><a href="javascript:void(0)">分</a></li>
+                    <li data-value="2"><a href="javascript:void(0)">小时</a></li>
+                    <li data-value="3"><a href="javascript:void(0)">日</a></li>
+                    <li data-value="4"><a href="javascript:void(0)">月</a></li>
+                    <li data-value="5"><a href="javascript:void(0)">周</a></li>
+                    <li data-value="6"><a href="javascript:void(0)">年</a></li>
+                </ul>
+            </div>
+            <div class="main1box">
+                <div class="main" id="main1">
+                    <div class="box">
+                        <div class="line">
+                            <input type="radio" name="second_chooser" id="second_chooser_every" class="every" checked="checked" />
+                            每秒
+                        </div>
+
+                        <div class="line">
+                            <input type="radio" name="second_chooser" id="second_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" value="0" id="secondStart_1">
+                            秒开始,每
+                            <input class="numberspinner" style="width: 60px;" value="1" id="secondEnd_1">
+                            秒执行一次
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="second_chooser" id="second_chooser_cycle" class="cycle" />
+                            周期从
+                            <input class="numberspinner" style="width: 60px;" value="1" id="secondStart_0">
+                            -
+                            <input class="numberspinner" style="width: 60px;" value="2" id="secondEnd_0">
+                            秒
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="second_chooser" id="second_chooser_choose" class="choose" />
+                            指定
+                        </div>
+                        <div class="second_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="0">00
+                            <input type="checkbox" value="1">01
+                            <input type="checkbox" value="2">02
+                            <input type="checkbox" value="3">03
+                            <input type="checkbox" value="4">04
+                            <input type="checkbox" value="5">05
+                            <input type="checkbox" value="6">06
+                            <input type="checkbox" value="7">07
+                            <input type="checkbox" value="8">08
+                            <input type="checkbox" value="9">09
+                        </div>
+                        <div class="second_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="10">10
+                            <input type="checkbox" value="11">11
+                            <input type="checkbox" value="12">12
+                            <input type="checkbox" value="13">13
+                            <input type="checkbox" value="14">14
+                            <input type="checkbox" value="15">15
+                            <input type="checkbox" value="16">16
+                            <input type="checkbox" value="17">17
+                            <input type="checkbox" value="18">18
+                            <input type="checkbox" value="19">19
+                        </div>
+                        <div class="second_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="20">20
+                            <input type="checkbox" value="21">21
+                            <input type="checkbox" value="22">22
+                            <input type="checkbox" value="23">23
+                            <input type="checkbox" value="24">24
+                            <input type="checkbox" value="25">25
+                            <input type="checkbox" value="26">26
+                            <input type="checkbox" value="27">27
+                            <input type="checkbox" value="28">28
+                            <input type="checkbox" value="29">29
+                        </div>
+                        <div class="second_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="30">30
+                            <input type="checkbox" value="31">31
+                            <input type="checkbox" value="32">32
+                            <input type="checkbox" value="33">33
+                            <input type="checkbox" value="34">34
+                            <input type="checkbox" value="35">35
+                            <input type="checkbox" value="36">36
+                            <input type="checkbox" value="37">37
+                            <input type="checkbox" value="38">38
+                            <input type="checkbox" value="39">39
+                        </div>
+                        <div class="second_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="40">40
+                            <input type="checkbox" value="41">41
+                            <input type="checkbox" value="42">42
+                            <input type="checkbox" value="43">43
+                            <input type="checkbox" value="44">44
+                            <input type="checkbox" value="45">45
+                            <input type="checkbox" value="46">46
+                            <input type="checkbox" value="47">47
+                            <input type="checkbox" value="48">48
+                            <input type="checkbox" value="49">49
+                        </div>
+                        <div class="second_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="50">50
+                            <input type="checkbox" value="51">51
+                            <input type="checkbox" value="52">52
+                            <input type="checkbox" value="53">53
+                            <input type="checkbox" value="54">54
+                            <input type="checkbox" value="55">55
+                            <input type="checkbox" value="56">56
+                            <input type="checkbox" value="57">57
+                            <input type="checkbox" value="58">58
+                            <input type="checkbox" value="59">59
+                        </div>
+                    </div>
+                    <div class="box" style="display: none">
+                        <div class="line">
+                            <input type="radio" name="minute_chooser" id="minute_chooser_every" class="every" checked="checked" />
+                            每分
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="minute_chooser" id="minute_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" value="0" id="minStart_1">
+                            分钟开始,每
+                            <input class="numberspinner" style="width: 60px;" value="1" id="minEnd_1">
+                            分钟执行一次
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="minute_chooser" id="minute_chooser_cycle" class="cycle" />
+                            周期从
+                            <input class="numberspinner" style="width: 60px;" value="1" id="minStart_0">
+                            -
+                            <input class="numberspinner" style="width: 60px;" value="2" id="minEnd_0">
+                            分钟
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="minute_chooser" id="minute_chooser_choose" class="choose" />
+                            指定
+                        </div>
+                        <div class="minute_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="0">00
+                            <input type="checkbox" value="1">01
+                            <input type="checkbox" value="2">02
+                            <input type="checkbox" value="3">03
+                            <input type="checkbox" value="4">04
+                            <input type="checkbox" value="5">05
+                            <input type="checkbox" value="6">06
+                            <input type="checkbox" value="7">07
+                            <input type="checkbox" value="8">08
+                            <input type="checkbox" value="9">09
+                        </div>
+                        <div class="minute_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="10">10
+                            <input type="checkbox" value="11">11
+                            <input type="checkbox" value="12">12
+                            <input type="checkbox" value="13">13
+                            <input type="checkbox" value="14">14
+                            <input type="checkbox" value="15">15
+                            <input type="checkbox" value="16">16
+                            <input type="checkbox" value="17">17
+                            <input type="checkbox" value="18">18
+                            <input type="checkbox" value="19">19
+                        </div>
+                        <div class="minute_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="20">20
+                            <input type="checkbox" value="21">21
+                            <input type="checkbox" value="22">22
+                            <input type="checkbox" value="23">23
+                            <input type="checkbox" value="24">24
+                            <input type="checkbox" value="25">25
+                            <input type="checkbox" value="26">26
+                            <input type="checkbox" value="27">27
+                            <input type="checkbox" value="28">28
+                            <input type="checkbox" value="29">29
+                        </div>
+                        <div class="minute_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="30">30
+                            <input type="checkbox" value="31">31
+                            <input type="checkbox" value="32">32
+                            <input type="checkbox" value="33">33
+                            <input type="checkbox" value="34">34
+                            <input type="checkbox" value="35">35
+                            <input type="checkbox" value="36">36
+                            <input type="checkbox" value="37">37
+                            <input type="checkbox" value="38">38
+                            <input type="checkbox" value="39">39
+                        </div>
+                        <div class="minute_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="40">40
+                            <input type="checkbox" value="41">41
+                            <input type="checkbox" value="42">42
+                            <input type="checkbox" value="43">43
+                            <input type="checkbox" value="44">44
+                            <input type="checkbox" value="45">45
+                            <input type="checkbox" value="46">46
+                            <input type="checkbox" value="47">47
+                            <input type="checkbox" value="48">48
+                            <input type="checkbox" value="49">49
+                        </div>
+                        <div class="minute_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="50">50
+                            <input type="checkbox" value="51">51
+                            <input type="checkbox" value="52">52
+                            <input type="checkbox" value="53">53
+                            <input type="checkbox" value="54">54
+                            <input type="checkbox" value="55">55
+                            <input type="checkbox" value="56">56
+                            <input type="checkbox" value="57">57
+                            <input type="checkbox" value="58">58
+                            <input type="checkbox" value="59">59
+                        </div>
+                    </div>
+                    <div class="box" style="display: none">
+                        <div class="line">
+                            <input type="radio" name="hour_chooser" id="hour_chooser_every" class="every" checked="checked" />
+                            每小时
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="hour_chooser" id="hour_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" value="0" id="hourStart_1">
+                            小时开始,每
+                            <input class="numberspinner" style="width: 60px;" value="1" id="hourEnd_1">
+                            小时执行一次
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="hour_chooser" id="hour_chooser_cycle" class="cycle">
+                            周期从
+                            <input class="numberspinner" style="width: 60px;" value="0" id="hourStart_0">
+                            -
+                            <input class="numberspinner" style="width: 60px;" value="2" id="hourEnd_0">
+                            小时
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="hour_chooser" id="hour_chooser_choose" class="choose" />
+                            指定
+                        </div>
+                        <div class="hour_list" style="padding-left: 25px;">
+                            AM:
+                            <input type="checkbox" value="0">00
+                            <input type="checkbox" value="1">01
+                            <input type="checkbox" value="2">02
+                            <input type="checkbox" value="3">03
+                            <input type="checkbox" value="4">04
+                            <input type="checkbox" value="5">05
+                            <input type="checkbox" value="6">06
+                            <input type="checkbox" value="7">07
+                            <input type="checkbox" value="8">08
+                            <input type="checkbox" value="9">09
+                            <input type="checkbox" value="10">10
+                            <input type="checkbox" value="11">11
+                        </div>
+                        <div class="hour_list" style="padding-left: 25px;">
+                            PM:
+                            <input type="checkbox" value="12">12
+                            <input type="checkbox" value="13">13
+                            <input type="checkbox" value="14">14
+                            <input type="checkbox" value="15">15
+                            <input type="checkbox" value="16">16
+                            <input type="checkbox" value="17">17
+                            <input type="checkbox" value="18">18
+                            <input type="checkbox" value="19">19
+                            <input type="checkbox" value="20">20
+                            <input type="checkbox" value="21">21
+                            <input type="checkbox" value="22">22
+                            <input type="checkbox" value="23">23
+                        </div>
+                    </div>
+                    <div class="box" style="display: none" style="padding-left: 25px;">
+                        <div class="line">
+                            <input type="radio" name="day_chooser" id="day_chooser_every" class="every" checked="checked" />
+                            每日
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="day_chooser" id="day_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" value="1" id="dayStart_1">
+                            日开始,每
+                            <input class="numberspinner" style="width: 60px;" value="1" id="dayEnd_1">
+                            天执行一次
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="day_chooser" id="day_chooser_cycle" class="cycle" />
+                            周期从
+                            <input class="numberspinner" style="width: 60px;" value="1" id="dayStart_0">
+                            -
+                            <input class="numberspinner" style="width: 60px;" value="2" id="dayEnd_0">
+                            日
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="day_chooser" id="day_chooser_nochoose" class="nochoose" />
+                            不指定
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="day_chooser" id="day_chooser_choose" class="choose" />
+                            指定
+                        </div>
+                        <div class="day_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="1">01
+                            <input type="checkbox" value="2">02
+                            <input type="checkbox" value="3">03
+                            <input type="checkbox" value="4">04
+                            <input type="checkbox" value="5">05
+                            <input type="checkbox" value="6">06
+                            <input type="checkbox" value="7">07
+                            <input type="checkbox" value="8">08
+                            <input type="checkbox" value="9">09
+                            <input type="checkbox" value="10">10
+                            <input type="checkbox" value="11">11
+                            <input type="checkbox" value="12">12
+                            <input type="checkbox" value="13">13
+                            <input type="checkbox" value="14">14
+                            <input type="checkbox" value="15">15
+                         
+                        </div>
+                        <div class="day_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="16">16
+                            <input type="checkbox" value="17">17
+                            <input type="checkbox" value="18">18
+                            <input type="checkbox" value="19">19
+                            <input type="checkbox" value="20">20
+                            <input type="checkbox" value="21">21
+                            <input type="checkbox" value="22">22
+                            <input type="checkbox" value="23">23
+                            <input type="checkbox" value="24">24
+                            <input type="checkbox" value="25">25
+                            <input type="checkbox" value="26">26
+                            <input type="checkbox" value="27">27
+                            <input type="checkbox" value="28">28
+                            <input type="checkbox" value="29">29
+                            <input type="checkbox" value="30">30
+                            <input type="checkbox" value="31">31
+                        </div>
+                    </div>
+                    <div class="box" style="display: none">
+                        <div class="line">
+                            <input type="radio" name="month_chooser" id="month_chooser_every" class="every" checked="checked" />
+                            每月
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="month_chooser" id="month_chooser_start" class="start">
+                            从
+                            <input class="numberspinner" style="width: 60px;" data-options="min:1,max:12" value="1"
+                                id="mouthStart_1">
+                            日开始,每
+                            <input class="numberspinner" style="width: 60px;" data-options="min:1,max:12" value="1"
+                                id="mouthEnd_1">
+                            月执行一次
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="month_chooser" id="month_chooser_cycle" class="cycle">
+                            周期从
+                            <input class="numberspinner" style="width: 60px;" value="1" id="mouthStart_0">
+                            -
+                            <input class="numberspinner" style="width: 60px;" value="2" id="mouthEnd_0">
+                            月
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="month_chooser" id="month_chooser_choose" class="choose" />
+                            指定
+                        </div>
+                        <div class="month_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="1">1
+                            <input type="checkbox" value="2">2
+                            <input type="checkbox" value="3">3
+                            <input type="checkbox" value="4">4
+                            <input type="checkbox" value="5">5
+                            <input type="checkbox" value="6">6
+                            <input type="checkbox" value="7">7
+                            <input type="checkbox" value="8">8
+                            <input type="checkbox" value="9">9
+                            <input type="checkbox" value="10">10
+                            <input type="checkbox" value="11">11
+                            <input type="checkbox" value="12">12
+                        </div>
+                    </div>
+                    <div class="box" style="display: none">
+                        <div class="line">
+                            <input type="radio" name="weekday_chooser" id="weekday_chooser_every" class="every" />
+                            每周
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="weekday_chooser" id="weekday_chooser_start" class="start">
+                            第<input class="numberspinner" style="width: 60px;" value="1" id="weekdayStart_1">
+                            周 的星期<input class="numberspinner" style="width: 60px;" id="weekdayEnd_1" value="1">
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="weekday_chooser" id="weekday_chooser_cycle" class="cycle">
+                            周期 从星期<input class="numberspinner" style="width: 60px;" id="weekStart_0" value="1">
+                            -
+                            <input class="numberspinner" style="width: 60px;" value="2" id="weekEnd_0">
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="weekday_chooser" id="weekday_chooser_nochoose" class="nochoose" checked="checked" />
+                            不指定
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="weekday_chooser" id="weekday_chooser_choose" class="choose" />
+                            指定
+                        </div>
+                        <div class="weekday_list" style="padding-left: 25px;">
+                            <input type="checkbox" value="1">Sunday
+                            <input type="checkbox" value="2">Monday
+                            <input type="checkbox" value="3">Tuesday
+                            <input type="checkbox" value="4">Wednesday
+                            <input type="checkbox" value="5">Thursday
+                            <input type="checkbox" value="6">Friday
+                            <input type="checkbox" value="7">Saturday
+                        </div>
+                    </div>
+                    <div class="box" style="display: none">
+                        <div class="line">
+                            <input type="radio" name="year_chooser" id="year_chooser_every" class="every" checked="checked" />
+                            每年
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="year_chooser" id="year_chooser_cycle" class="cycle">
+                            周期 从
+                            <input class="numberspinner" style="width: 90px;" id="yearStart_0" value="2015">
+                            -
+                            <input class="numberspinner" style="width: 90px;" id="yearEnd_0" value="2016">
+                        </div>
+                        <div class="line">
+                            <input type="radio" name="year_chooser" id="year_chooser_nochoose" class="nochoose" />
+                            不指定
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+            Cron表达式:
+                <br />
+            <br />
+            <input type="text" style="width: 60px" name="v_second" value="*" readonly="readonly" />
+            <input type="text" style="width: 60px" name="v_minute" value="*" readonly="readonly" />
+            <input type="text" style="width: 60px" name="v_hour" value="*" readonly="readonly" />
+            <input type="text" style="width: 60px" name="v_day" value="*" readonly="readonly" />
+            <input type="text" style="width: 60px" name="v_month" value="*" readonly="readonly" />
+            <input type="text" style="width: 60px" name="v_weekday" value="?" readonly="readonly" />
+            <input type="text" style="width: 60px" name="v_year" readonly="readonly" />
+            <br />
+            <br />
+            <input type="text" name="cron" id="cron" size="70" style="width: 450px" />
+            <input type="button" name="generate" id="generate" value="Generate Cron" />
+        </div>
+        <br />
+        <br />
+        <br />
+        <div style="width: 1000px;">
+            计划执行时间:<br />
+            <br />
+            <textarea name="command" id="command" rows="10" cols="70" style="width: 450px"></textarea>
+            <input type="button" name="submit" id="submit" value="Create Crontab Line" />
+        </div>
+    </form>
+</div>
+<link href="/Content/Css/cron.css" rel="stylesheet" />
+<script src="/Content/Scripts/cron-expression.js"></script>

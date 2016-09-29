@@ -1,0 +1,52 @@
+﻿@using Weiz.TaskManager.Models;
+@model PageOf<ErrorLogModel>
+
+<div class="breadclip">
+    <i class="homeIcon inline"></i><a href="#">首页</a><a href="#">日志分析</a>错误日志
+</div>
+<div class="pd20">
+    <div class="sub_title">
+        <div class="inline f_l">错误日志列表</div>
+    </div>
+    <div class="list_tablebox mg_t10">
+        <table cellpadding="0" cellspacing="1" border="0">
+            <tr>
+                <th width="5%">ID</th>
+                <th width="10%">错误时间</th>
+                <th width="5%">错误等级</th>
+                <th width="15%">错误摘要</th>
+                <th width="30%">错误描述</th>
+                <th width="10%">模块</th>
+            </tr>
+
+            @if (Model != null && Model.Items.Count > 0)
+            {
+                foreach (var item in Model.Items)
+                {
+                <tr>
+                    <td>@item.nId</td>
+                    <td>@item.dtDate</td>
+                    <td>@item.sLevel</td>
+                    <td>@item.sMessage</td>
+                    <td>@item.sException</td>
+                    <td>@item.sName</td>
+                </tr>
+                }
+            }
+        </table>
+        @if (Model != null && Model.Items.Count > 0)
+        {
+            <div class="pagination">
+                @Html.ShowFPage(Url.Action(null
+                        , new
+                        {
+                            PageNo = "{0}",
+                        })
+                        , (int)Model.PageIndex
+                        , 20
+                        , (int)Model.Total)
+            </div>
+
+        }
+    </div>
+</div>

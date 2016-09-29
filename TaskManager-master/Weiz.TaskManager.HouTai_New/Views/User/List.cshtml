@@ -1,0 +1,56 @@
+﻿@using Weiz.TaskManager.Models;
+@model PageOf<UserModel>
+
+<div class="breadclip">
+    <i class="homeIcon inline"></i><a href="#">首页</a><a href="#">日志分析</a>运行日志
+</div>
+<div class="pd20">
+    <div class="sub_title">
+        <div class="inline f_l">运行日志列表</div>
+    </div>
+    <div class="list_tablebox mg_t10">
+        <table cellpadding="0" cellspacing="1" border="0">
+            <tr>
+                <th width="5%">ID</th>
+                <th width="15%">用户账号</th>
+                <th width="15%">真实姓名</th>
+                <th width="5%">邮箱</th>
+                <th width="5%">创建时间</th>
+                <th width="5%">是否管理员</th>
+                <th width="8%">状态</th>
+                <th width="8%">操作</th>
+            </tr>
+
+            @if (Model != null && Model.Items.Count > 0)
+            {
+                foreach (var item in Model.Items)
+                {
+                <tr>
+                    <td>@item.UserId</td>
+                    <td>@item.UserName</td>
+                    <td>@item.TrueName</td>
+                    <td>@item.UserEmail</td>
+                    <td>@item.CreateTime</td>
+                    <td>@item.IsAdmin</td>
+                    <td>@item.Status</td>
+                    <td></td>
+                </tr>
+                }
+            }
+        </table>
+        @if (Model != null && Model.Items.Count > 0)
+        {
+            <div class="pagination">
+                @Html.ShowFPage(Url.Action(null
+                        , new
+                        {
+                            PageNo = "{0}",
+                        })
+                        , (int)Model.PageIndex
+                        , 20
+                        , (int)Model.Total)
+            </div>
+
+        }
+    </div>
+</div>

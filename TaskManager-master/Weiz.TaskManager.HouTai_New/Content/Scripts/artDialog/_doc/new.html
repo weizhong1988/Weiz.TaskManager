@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>artDialog</title>
+<script>
+// skin demo
+(function() {
+	var _skin, _jQuery;
+	var _search = window.location.search;
+	if (_search) {
+		_skin = _search.split('demoSkin=')[1];
+		_jQuery = _search.indexOf('jQuery=true') !== -1;
+		if (_jQuery) document.write('<scr'+'ipt src="../jquery-1.6.2.min.js"></sc'+'ript>');
+	};
+	
+	document.write('<scr'+'ipt src="../artDialog.source.js?skin=' + (_skin || 'default') +'"></sc'+'ript>');
+	window._isDemoSkin = !!_skin;	
+
+})();
+</script>
+<script src="../plugins/iframeTools.source.js"></script>
+<script src="demo.js"></script>
+<script src="highlight/highlight.pack.js"></script>
+<script src="highlight/languages/javascript.js"></script>
+<script>
+hljs.tabReplace = '    ';
+hljs.initHighlightingOnLoad();
+</script>
+<link href="demo.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/magula.css">
+</head>
+
+<body>
+<div id="doc">
+  <div id="header">
+    <h1 id="logo"><a href="../index.html">artDialog</a></h1>
+    <ul id="nav" class="nav">
+      <li><a href="../index.html" class="home">首页</a></li>
+      <li><a href="./API.html" class="api">文档</a></li>
+      <li><a href="./down.html" class="down">下载</a></li>
+      <li><a href="./log.html" class="log">更新</a></li>
+      <li><a href="./labs.html" class="labs">实验</a></li>
+      <li><a href="./license.html" class="license">授权</a></li>
+      |
+      <li><a href="#" id="nav-skin">皮肤</a></li>
+    </ul>
+  </div>
+  <div id="main">
+  	<h1 style="font-size:36px; line-height:2.2em; height:2.2em; margin-top:10px; margin-bottom:20px; color:#9DCCB8; font-family:'宋体'">artDialog4 有什么新功能？</h1>
+     <div id="DOMContentWrap">
+    <h2>支持自定义按钮</h2>
+    <div id="demoCode_button">
+      <pre><code class="javascript">var dialog = art.dialog({
+    title: '警告',
+    content: '点击管理按钮将让删除按钮可用',
+    width: '20em',
+    button: [{
+    	name: '管理',
+        callback: function () {
+            this.content('我更改了删除按钮').button({
+                name: '删除',
+                disabled: false
+            });
+            return false;
+        },
+        focus: true
+    }]
+});
+
+dialog.button(
+    {
+        name: '删除',
+        callback: function () {
+            alert('remove')
+        },
+        disabled: true
+    }
+)</code></pre>
+    </div>
+    <p class="buttons">
+      <button class="runCode" name="demoCode_button">运行&raquo;</button>
+    </p>
+    </div>
+    
+    <h2>内容支持传入DOM元素</h2>
+    <p>元素完整移动到对话框中，所以原有的事件与属性都将会保留；如果隐藏元素被传入到对话框，会设置display:block属性显示该元素；对话框关闭的时候元素将恢复到原来在页面的位置，style display属性也将恢复</p>
+    <div id="demoCode_content">
+      <pre><code class="javascript">var dialog = art.dialog({
+	content: document.getElementById('DOMContentWrap'),
+    id: 'D345'
+});
+</code></pre>
+    </div>
+    <p class="buttons">
+      <button class="runCode" name="demoCode_content">运行&raquo;</button>
+    </p>
+    <h2>支持百分比位置与尺寸</h2>
+    <p>使用百分比作为参数，浏览器窗口尺寸调整也能执行适应</p>
+    <div id="demoCode_sp">
+      <pre><code class="javascript">var dialog = art.dialog({
+    left: '100%',
+	top: '100%',
+    width: 240,
+    height: '100%',
+    fixed: true,
+    resize: false
+});
+</code></pre>
+    </div>
+    <p class="buttons">
+      <button class="runCode" name="demoCode_sp">运行&raquo;</button>
+    </p>
+    
+    <h2>跨框架交换数据</h2>
+    <p>框架与框架之间以及与主页面之间进行数据交换是非常头疼的事情，常规情况下你必须知道框架的名称才能进行数据交换，如果是在复杂的多层框架下操作简直就是噩梦——但在artDialog4中这一切完全被简化，它有一个统一的数据共享接口，可以共享任意类型的数据，任何页面都能使用同一接口获取数据。</p>
+        <div id="demoCode_data">
+          <pre><code class="javascript">art.dialog.data('test', document.getElementById('demoInput04-3').value);
+art.dialog.open('./iframeA.html');
+
+// 此时 iframeA.html 页面可以使用 art.dialog.data('test') 获取到数据，如：
+// document.getElementById('aInput').value = art.dialog.data('test');
+</code></pre>
+        </div>
+        <p class="buttons">
+          <label>请输入测试文字：<input id="demoInput04-3" title="demoInput04-3" type="text" value="精于心，简于形" style="margin-right:10px" /></label> <button class="runCode" name="demoCode_data" title="chrome浏览器不能在本地运行iframe">运行&raquo;</button>
+          </p>
+
+    <p style="text-align:center"><a href="log.html">查看详细更新与升级注意事项&raquo;</a></p>
+  </div>
+  <div id="footer"></div>
+</div>
+<script>_isDemoSkin && window._demoSkin && _demoSkin();</script>
+</body>
+</html>

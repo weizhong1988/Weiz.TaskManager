@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iframe demo</title>
+<script src="../artDialog.source.js?skin=default"></script>
+<script src="../plugins/iframeTools.source.js"></script>
+<style>
+#iframePage { font-size:12px  }
+#tips { color:#F00; }
+.tip { color:#999; }
+</style>
+<script>
+var test = function(){
+	var top = art.dialog.top;
+	top.document.getElementById('demoSpan04').innerHTML = '我是石头里面蹦出来的！';
+	//top.art.dialog({content: '我的window在哪里？', lock: true});
+};
+</script>
+</head>
+
+<body>
+<div id="iframePage">
+	<form id="googleForm" action="http://www.google.com/search" name="f" target="_blank">
+	 <fieldset>
+		<legend>请输入关键字</legend>
+		<input id="googleText" name="q" title="Google Search" value="" size="26" /><input style="display:none" name="btnG" type="submit" value="Google Search" />
+        <div id="tips"></div>
+		<button>button</button>
+	</fieldset>
+	</form>
+	<a href="#" onclick="art.dialog.close(); return false"  title="art.dialog.close()">iframe中关闭对话框</a> | <a href="#" onclick="test(); return false" title="art.dialog.top.document.getElementById('demoSpan04').innerHTML = '我是石头里面蹦出来的！'">iframe操纵来源页面对象</a>
+</div>
+</body>
+</html>

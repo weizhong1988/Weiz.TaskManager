@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>artDialog</title>
+<script>
+// skin demo
+(function() {
+	var _skin, _jQuery;
+	var _search = window.location.search;
+	if (_search) {
+		_skin = _search.split('demoSkin=')[1];
+		_jQuery = _search.indexOf('jQuery=true') !== -1;
+		if (_jQuery) document.write('<scr'+'ipt src="../jquery-1.6.2.min.js"></sc'+'ript>');
+	};
+	
+	document.write('<scr'+'ipt src="../artDialog.source.js?skin=' + (_skin || 'default') +'"></sc'+'ript>');
+	window._isDemoSkin = !!_skin;
+})();
+</script>
+
+<script src="demo.js"></script>
+<script src="highlight/highlight.pack.js"></script>
+<script src="highlight/languages/javascript.js"></script>
+<script>
+hljs.tabReplace = '    ';
+hljs.initHighlightingOnLoad();
+</script>
+<link href="demo.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/magula.css">
+</head>
+
+<body>
+<div id="doc">
+  <div id="header">
+    <h1 id="logo"><a href="../index.html">artDialog</a></h1>
+    <ul id="nav" class="nav">
+      <li><a href="../index.html" class="home">首页</a></li>
+      <li><a href="./API.html" class="api">文档</a></li>
+      <li><a href="./down.html" class="down">下载</a></li>
+      <li><a href="./log.html" class="log">更新</a></li>
+      <li><a href="./labs.html" class="labs">实验</a></li>
+      <li><a href="./license.html" class="license">授权</a></li>
+      |
+      <li><a href="#" id="nav-skin">皮肤</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <h2>更新</h2>
+    <div style="margin:4px 0; padding:5px; background:#EEF7F5; text-align:center; color:#000; border-radius:3px; border:1px solid #D7EAE2;" class="tips"><span style="color:#DFB113">注意！</span>artDialog5+不再支持iframe，代码迁移至<a href="https://github.com/aui/artDialog" style="text-decoration:underline;">github</a>托管。<br /><a href="upd.txt" target="_blank" style="text-decoration:underline;">artDialog3升级到4操作文档</a></div>
+    <p>
+	<dl>
+    	<dt>4.1.6</dt>
+        <dd>修复刷新框架后脚本报错的问题</dd>
+	</dl>
+	<dl>
+    	<dt>4.1.5</dt>
+        <dd>修复异步加载 artDialog.js 导致锁屏无法使用的问题</dd>
+	</dl>
+	<dl>
+    	<dt>4.1.4</dt>
+        <dd>修复上一版本下拉框可能无法使用的问题</dd>
+        <dd>iframeTools: 给 alert 方法增加了回调函数</dd>
+       	<dd>把对话框 DOM 插入位置由 body 下方改为 body 上方，以便 tab 键更快选中对话按钮焦点</dd>
+	</dl>
+	<dl>
+		<dt>4.1.3</dt>
+		<dd>双击遮罩不再直接关闭，而是等同于关闭按钮与取消按钮</dd>
+		<dd>修复 IE6 在特殊情况下可能因为 fixed 定位出现 body 背景图片异常</dd>
+		<dd>修复 iframeTools data 方法无法传入空值的 BUG</dd>
+		<dd>修复 focus 参数失效的问题</dd>
+		<dd>修复部分皮肤在 firefox7.0 版下，标题栏出现省略号的问题</dd>
+	</dl>
+	<dl>
+		<dt>4.1.2</dt>
+		<dd>修复 v4.0.5 之后版本在浏览器窗口调节的时候可能出现对话框变形问题</dd>
+		<dd>top 参数黄金比例不再采用单独的关键字，可使用 '38.2%' 表示</dd>
+        <dd>更新无标题栏的样式</dd>
+	</dl>
+    <dl>
+    	<dt>4.1.1</dt>
+		<dd>修复 content 方法传入 Element 的时候可能造成对话框无法关闭的 BUG</dd>
+		<dd>修复 iframeTools open 方法与 jQuery 1.6.2 不兼容问题</dd>
+		<dd>修复了使用 uglifyjs 压缩导致代码不兼容 IE6 的问题</dd>
+		<dd>新增了“black”、“green”皮肤。“simple”皮肤去掉了标题栏，原“gray”更名为“opera”</dd>
+        <dd>新增 content 扩展方法写入消息后，让对话框以自身为中心放大的特性</dd>
+		<dd>iframeTools: 完善了 art.dialog.top 方法内部的判断</dd>
+		<dd>iframeTools: open 方法在IE6下提高了获取 iframe 内部尺寸精确度</dd>
+		<dd>这些参数将逐步被新名词代替（推荐在4.1.1+版本使用新参数名）：yesFn&raquo;ok | noFn&raquo;cancel | closeFn&raquo;close | initFn&raquo;init | yesText&raquo;okVal | noText&raquo;cancelVal</dd>
+    </dl>
+    <dl>
+    	<dt>4.1.0</dt>
+        <dd>新增"blue"皮肤</dd>
+        <dd>调整内部结构，取消模板解析机制，tmpl参数不能再使用</dd>
+    </dl>
+    <dl>
+    	<dt>4.0.5</dt>
+        <dd>增加高亮按钮的样式：确定按钮默认高亮（自定义按钮可使用focus参数高亮）</dd>
+        <dd>新增“twitter”皮肤</dd>
+        <dd>修改默认皮肤标题栏为浅灰色</dd>
+        <dd>解决IE浏览器按钮字体模糊问题</dd>
+        <dd>解决设置artDialog默认配置lock为true带来的异常</dd>
+    </dl>
+    <dl>
+    	<dt>4.0.4</dt>
+        <dd>解决历史遗留BUG：IE8下外部脚本动态插入内容后没有触发浏览器渲染的问题。此更新涉及到所有皮肤文件</dd>
+        <dd>让hide方法可隐藏lock方法的遮罩</dd>
+        <dd>jQuery版本最低兼容jQuery 1.3.2</dd>
+		<dd>basic版本新增hide与show接口</dd>
+    </dl>
+	<dl>
+		<dt>4.0.3</dt>
+        <dd>新增artDialog <a href="../basic/index.html" style="text-decoration:underline">基本版本</a>；它只拥有核心功能，文件只有常规版本的一半大小，可被客户端快速载入</dd>
+        <dd>新增"idialog"皮肤</dd>
+        <dd>精简内嵌事件系统，进一步减少体积(压缩版比上一版本少近了3kb)</dd>
+        <dd>修复一处IE拖拽操作可能出现的错误</dd>
+        <dd>iframeTools: open方法默认不再强制锁屏</dd>
+        <dd>iframeTools: 增加open方法点击内部iframe内容也可以置顶对话框的特性</dd>
+        <dd>内部UI框架命名更新，可能会影响第三方皮肤</dd>
+	</dl>
+	<dl>
+		<dt>4.0.2</dt>
+		<dd>iframeTools:  tips方法支持连续写入消息</dd>
+        <dd>iframeTools:  对较大的open iframe进行拖动优化（拖动时隐藏iframe）</dd>
+        <dd>拖拽进一步模块化，完全使用事件代理，模块可外置或者被完整剔除</dd>
+        <dd>增强icon参数自由度，不再依赖对话框样式文件定义。可存入任意图标到“skins/icons/”并使用它们</dd>
+        <dd>修复IE8初始化页面可能出现闪烁的对话框</dd>
+        <dd>增加“gray”与“simple”两款皮肤</dd>
+        <dd>修复上一版本的连续锁屏出现的对话框叠加高度秩序问题</dd>
+	</dl>
+	<dl>
+		<dt>4.0.1</dt>
+		<dd>iframeTools:  拖拽操作增加透明遮罩，防止鼠标指针落入框架而导致监听失败，提高拖拽流畅性</dd>
+		<dd>iframeTools:  对open方法增加一个私有的iframe扩展方法，用来引用其创建的iframe对象</dd>
+		<dd>新增点击内容部分也可以如点击标题一样置顶对话框的特性</dd>
+	</dl>
+    <dl>
+    	<dt>4.0.0 Full version</dt>
+        <dd>为了更好的满足iframe应用需求而不影响artDialog其主要定位，所以正式版把iframeTools扩展独立出来维护</dd>
+        <dd>iframeTools： 增加父页面刷新与关闭后子对话框也将关闭的特性。（由于iframe注销后其产生的对象会被大多数浏览器在内存中移除，增加此特性可以有效的解决对话框报错）</dd>
+        <dd>iframeTools： 新增了art.dialog.through方法，普通对话框也可穿越框架</dd>
+        <dd>iframeTools： 修复open获取iframe宽度比实际宽度小8px的问题（重新计算了body标签margin）</dd>
+        <dd>iframeTools： 修复open方法“aero”与“chrome”风格文件iframe内容padding不为0的导致撑开问题</dd>
+        <dd>iframeTools： 修复后弹出的对话框不置顶的问题</dd>
+    </dl>
+    <dl>
+      <dt>4.0.0 Beta</dt>
+      <dd><a href="new.html">查看新特性演示</a></dd>
+      <dd>重新组织代码，自动切换单例模式与DOM清理机制，性能得到较大的优化，相对上一版本直降30%内存</dd>
+      <dd>DOM底层api兼容jQuery api，同步发行jQuery版本</dd>
+      <dd style="text-decoration:underline; font-weight:bold">消息内容支持传入DOM元素</dd>
+      <dd>增加title标题接口</dd>
+      <dd style="text-decoration:underline; font-weight:bold">增加button自定义按钮接口</dd>
+      <dd>增加lock与unlock接口</dd>
+      <dd style="text-decoration:underline; font-weight:bold">新增data方法用来在iframe之间共享数据</dd>
+      <dd>重定义zIndex配置参数</dd>
+      <dd>重新支持调节对话框大小</dd>
+      <dd>支持用第三方框架加载自身</dd>
+      <dd>对话框内容支持解析含有&lt;script type="text/dialog"&gt;&lt;/script&gt;的脚本</dd>
+      <dd>art.dialog.close 方法在iframe页面重载后仍然有效</dd>
+      <dd>配置参数全部为可选，如果没有content，它将出现loading动画</dd>
+      <dd style="text-decoration:underline; font-weight:bold">left与top关键字用百分比代替，同时增加width与height传递百分比参数</dd>
+      <dd>art.dialog.get(id) 变更为 art.dialog.list[id]</dd>
+      <dd>不再支持多皮肤共存,css文件默认不自动加载：需要引用样式文件或者写url参数artDialog.js?skin=aero</dd>
+      <dd>不再支持页面未就绪弹出对话框, 而建议在jQuery(function () {/* [code..] */})中或者window.onload = function () {/*[code..]*/}调用</dd>
+      <dd>不再支持iframe父子窗口自动注入artDialog文件：请给需要的框架页面引用artDialog.js</dd>
+    </dl>
+    <dl>
+      <dt>3.0.6</dt>
+      <dd>仅修复load模块无法载入远程数据问题</dd>
+    </dl>
+    <dl>
+      <dt>3.0.5</dt>
+      <dd>修复iPad或iPhone下使用锁屏焦点自动弹出的问题</dd>
+      <dd>修复移动设备使用手势缩放页面带来的漂移问题</dd>
+      <dd>修复fixed在移动设备中支持不完整的问题</dd>
+      <dd>修复window.top是框架集(frameset)页面可能会带来无限循环递归的问题</dd>
+    </dl>
+    <dl>
+      <dt>3.0.4</dt>
+      <dd>修复close参数在open与load方法执行出错</dd>
+      <dd>修复输入过程中按Esc意外关闭对话框的问题</dd>
+      <dd>增加art.dialog.get()方法获取指定ID对话框API</dd>
+    </dl>
+    <dl>
+      <dt>3.0.3</dt>
+      <dd>修复锁屏的时候对话框内容无法使用退格键的BUG</dd>
+      <dd>修复框架集（frameset）页面不能植入artDialog而产生js报错的问题，并增加了其支持</dd>
+      <dd>art.dialog.open()产生的iframe其内部增加art.dialog.parent获取来源页window对象</dd>
+    </dl>
+    <dl>
+      <dt>3.0.2</dt>
+      <dd>对art.dialog.open()产生的iframe可直接用art.dialog.clsoe()方法关闭</dd>
+      <dd>改善与jQuery的配合：ajax将由强大的jQuery.ajax驱动</dd>
+      <dd>为了保持命名风格，原来的art.dialog.get()换成art.dialog.load()</dd>
+      <dd>修复用jQuery.ready()在页面载入时直接调用对话框导致left参数失效的BUG</dd>
+      <dd>修复若干细小的BUG</dd>
+    </dl>
+    <dl>
+      <dt>3.0.1</dt>
+      <dd>修复IE8可能重复执行的问题</dd>
+    </dl>
+    <dl>
+      <dt>3.0</dt>
+      <dd>重写架构，DOM底层与应用层分离，代码重用</dd>
+      <dd>修复v2版几个严重的BUG</dd>
+      <dd>大幅度提高在IE浏览器下的性能</dd>
+      <dd>支持多皮肤共存，支持动画</dd>
+      <dd>简化框架应用下的穿越与对象传递操作</dd>
+      <dd>公开默认配置的读写</dd>
+      <dd>重写IE6 fixed实现</dd>
+    </dl>
+    <dl>
+      <dt>2.0</dt>
+      <dd>重写代码，支持多对话框共存</dd>
+      <dd>支持返回扩展方法关闭对话框</dd>
+      <dd>解决v1已知的一些BUG</dd>
+    </dl>
+    <dl>
+      <dt>1.0</dt>
+      <dd>高度与宽度支持原生自适应内容，自适应文本对齐</dd>
+      <dd>支持拖动、Esc关闭对话框、坐标定位</dd>
+      <dd>支持自适应位置</dd>
+      <dd>支持IE6无抖动静止定位</dd>
+    </dl>
+    </p>
+  </div>
+  <div id="footer"></div>
+</div>
+<script>_isDemoSkin && window._demoSkin && _demoSkin();</script>
+</body>
+</html>
