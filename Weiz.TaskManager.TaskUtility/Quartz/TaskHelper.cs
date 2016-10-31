@@ -126,5 +126,13 @@ namespace Weiz.TaskManager.TaskUtility
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static IList<TaskModel> CurrentTaskList()
+        {
+            return task.GetAllTaskList();
+        }
     }
 }

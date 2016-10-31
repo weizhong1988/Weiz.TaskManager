@@ -1,5 +1,5 @@
-E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\obj\Release\Weiz.TaskManager.ServiceBus.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\log4net.config
+E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\quartz.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\App.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\Config\TaskConfig.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\Config\Config.config
@@ -28,5 +28,6 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\Weiz.TaskMa
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\log4net.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\Newtonsoft.Json.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\Weiz.TaskManager.DBUtility.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\obj\Release\Weiz.TaskManager.ServiceBus.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\obj\Release\Weiz.TaskManager.ServiceBus.exe
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\obj\Release\Weiz.TaskManager.ServiceBus.pdb

@@ -1,5 +1,5 @@
-E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\obj\Release\Weiz.TaskManager.HouTai_New.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\log4net.config
+E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\quartz.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Config\Config.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.HouTai_New.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.HouTai_New.pdb
@@ -35,5 +35,6 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.DA
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\log4net.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Newtonsoft.Json.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.DBUtility.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\obj\Release\Weiz.TaskManager.HouTai_New.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\obj\Release\Weiz.TaskManager.HouTai_New.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\obj\Release\Weiz.TaskManager.HouTai_New.pdb

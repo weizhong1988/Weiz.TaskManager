@@ -1,5 +1,5 @@
-E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\obj\Release\Weiz.TaskManager.TaskSet.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\log4net.config
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\quartz.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\App.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\Weiz.TaskManager.TaskSet.dll.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\Weiz.TaskManager.TaskSet.dll
@@ -23,5 +23,6 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\Newtonsoft.Json.
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\Weiz.TaskManager.DAL.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\log4net.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\Weiz.TaskManager.DBUtility.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\obj\Release\Weiz.TaskManager.TaskSet.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\obj\Release\Weiz.TaskManager.TaskSet.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\obj\Release\Weiz.TaskManager.TaskSet.pdb
