@@ -72,10 +72,5 @@ namespace Weiz.TaskManager.Models
         /// 任务备注
         /// </summary>
         public string Remark { get; set; }
-
-        /// <summary>
-        /// 是否删除
-        /// </summary>
-        public int IsDelete { get; set; }
     } 
 }
