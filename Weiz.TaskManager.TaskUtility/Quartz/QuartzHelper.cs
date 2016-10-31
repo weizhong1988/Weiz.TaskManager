@@ -50,32 +50,35 @@ namespace Weiz.TaskManager.TaskUtility
                 {
                     if (scheduler == null)
                     {
-                        NameValueCollection properties = new NameValueCollection();
+                        //NameValueCollection properties = new NameValueCollection();
 
-                        properties["quartz.scheduler.instanceName"] = "ExampleDefaultQuartzScheduler";
+                        //properties["quartz.scheduler.instanceName"] = "ExampleDefaultQuartzScheduler";
 
-                        properties["quartz.threadPool.type"] = "Quartz.Simpl.SimpleThreadPool, Quartz";
+                        //properties["quartz.threadPool.type"] = "Quartz.Simpl.SimpleThreadPool, Quartz";
 
-                        properties["quartz.threadPool.threadCount"] = "10";
+                        //properties["quartz.threadPool.threadCount"] = "10";
 
-                        properties["quartz.threadPool.threadPriority"] = "Normal";
+                        //properties["quartz.threadPool.threadPriority"] = "Normal";
 
-                        properties["quartz.jobStore.misfireThreshold"] = "60000";
+                        //properties["quartz.jobStore.misfireThreshold"] = "60000";
 
-                        properties["quartz.jobStore.type"] = "Quartz.Simpl.RAMJobStore, Quartz";
+                        //properties["quartz.jobStore.type"] = "Quartz.Simpl.RAMJobStore, Quartz";
 
-                        properties["quartz.scheduler.exporter.type"] = "Quartz.Simpl.RemotingSchedulerExporter, Quartz";
+                        //properties["quartz.scheduler.exporter.type"] = "Quartz.Simpl.RemotingSchedulerExporter, Quartz";
 
-                        properties["quartz.scheduler.exporter.port"] = "555";
+                        //properties["quartz.scheduler.exporter.port"] = "555";
 
-                        properties["quartz.scheduler.exporter.bindName"] = "QuartzScheduler";
+                        //properties["quartz.scheduler.exporter.bindName"] = "QuartzScheduler";
 
-                        properties["quartz.scheduler.exporter.channelType"] = scheme;
+                        //properties["quartz.scheduler.exporter.channelType"] = scheme;
 
-                        ISchedulerFactory factory = new StdSchedulerFactory(properties);
+                        //ISchedulerFactory factory = new StdSchedulerFactory(properties);
 
-                        scheduler = factory.GetScheduler();
-                        scheduler.Clear();
+                        //scheduler = factory.GetScheduler();
+
+                        ISchedulerFactory schedulerFactory = new StdSchedulerFactory();
+                        scheduler = schedulerFactory.GetScheduler();
+
                         LogHelper.WriteLog("任务调度初始化成功！");
                     }
                 }
@@ -342,6 +345,12 @@ namespace Weiz.TaskManager.TaskUtility
                 list.Add(TimeZoneInfo.ConvertTimeFromUtc(dtf.DateTime, TimeZoneInfo.Local));
             }
             return list;
+        }
+
+
+        public static object CurrentTaskList()
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

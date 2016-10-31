@@ -1,0 +1,5 @@
+ERROR 2016-10-31 16:38:17,324 [logerror] 任务“自动运行程序的任务”启动失败！
+System.TypeLoadException: 未能从程序集“Weiz.TaskManager.TaskSet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null”中加载类型“Weiz.TaskManager.TaskSet.AutoRunJob”。
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.GetClassInfo(String assemblyName, String className) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 292
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.ScheduleJob(TaskModel task, Boolean isDeleteOldTask) 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 190
+   在 Weiz.TaskManager.TaskUtility.QuartzHelper.StartScheduler() 位置 e:\vs2012\TaskManager-master\Weiz.TaskManager.TaskUtility\Quartz\QuartzHelper.cs:行号 115
