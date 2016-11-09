@@ -50,6 +50,7 @@ namespace Weiz.TaskManager.TaskUtility
                 {
                     if (scheduler == null)
                     {
+                        #region quartz 实例配置
                         //NameValueCollection properties = new NameValueCollection();
 
                         //properties["quartz.scheduler.instanceName"] = "ExampleDefaultQuartzScheduler";
@@ -75,7 +76,8 @@ namespace Weiz.TaskManager.TaskUtility
                         //ISchedulerFactory factory = new StdSchedulerFactory(properties);
 
                         //scheduler = factory.GetScheduler();
-
+                        #endregion
+                        //// 配置文件的方式，配置quartz实例
                         ISchedulerFactory schedulerFactory = new StdSchedulerFactory();
                         scheduler = schedulerFactory.GetScheduler();
 
@@ -137,8 +139,6 @@ namespace Weiz.TaskManager.TaskUtility
         {
             try
             {
-
-
                 NameValueCollection properties = new NameValueCollection();
 
                 properties["quartz.scheduler.instanceName"] = "schedMaintenanceService";
