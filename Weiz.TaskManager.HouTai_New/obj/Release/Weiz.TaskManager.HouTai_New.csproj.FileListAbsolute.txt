@@ -1,5 +1,4 @@
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\log4net.config
-E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\quartz.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Config\Config.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.HouTai_New.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.HouTai_New.pdb

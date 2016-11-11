@@ -1,5 +1,4 @@
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\log4net.config
-E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\quartz.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\App.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\Weiz.TaskManager.TaskSet.dll.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Tasks\bin\Release\Weiz.TaskManager.TaskSet.dll

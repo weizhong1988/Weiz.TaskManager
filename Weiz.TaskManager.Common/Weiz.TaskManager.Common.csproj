@@ -63,6 +63,7 @@
     <Compile Include="File\JsonHelper.cs" />
     <Compile Include="Log\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\PerformanceTracer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="log4net.config">

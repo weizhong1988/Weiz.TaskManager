@@ -53,6 +53,7 @@
     <Compile Include="Quartz\QuartzHelper.cs" />
     <Compile Include="Quartz\TaskHelper.cs" />
     <Compile Include="Utils\DbLogHelper.cs" />
+    <Compile Include="Utils\JobBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Weiz.TaskManager.BLL\Weiz.TaskManager.BLL.csproj">
@@ -69,9 +70,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="quartz.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="quartz.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

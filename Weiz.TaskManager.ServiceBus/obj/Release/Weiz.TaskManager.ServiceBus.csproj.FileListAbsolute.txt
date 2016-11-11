@@ -1,5 +1,4 @@
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\log4net.config
-E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\quartz.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\App.config
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\Config\TaskConfig.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.ServiceBus\bin\Release\Config\Config.config
