@@ -1,0 +1,9 @@
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Debug\log4net.config
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Debug\Weiz.TaskManager.Common.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Debug\Weiz.TaskManager.Common.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Debug\log4net.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Debug\Newtonsoft.Json.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Debug\log4net.xml
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Debug\Newtonsoft.Json.xml
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\obj\Debug\Weiz.TaskManager.Common.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\obj\Debug\Weiz.TaskManager.Common.pdb

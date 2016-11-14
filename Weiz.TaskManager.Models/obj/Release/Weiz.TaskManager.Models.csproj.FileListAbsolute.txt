@@ -3,3 +3,4 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.Models\bin\Release\Weiz.TaskManage
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Models\bin\Release\Weiz.TaskManager.Models.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Models\obj\Release\Weiz.TaskManager.Models.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Models\obj\Release\Weiz.TaskManager.Models.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Models\obj\Release\Weiz.TaskManager.Models.csprojResolveAssemblyReference.cache

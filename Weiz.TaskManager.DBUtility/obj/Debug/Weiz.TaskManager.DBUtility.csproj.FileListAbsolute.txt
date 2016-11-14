@@ -1,0 +1,12 @@
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\log4net.config
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Weiz.TaskManager.DBUtility.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Weiz.TaskManager.DBUtility.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Weiz.TaskManager.Common.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\log4net.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Newtonsoft.Json.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Weiz.TaskManager.Common.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\log4net.xml
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Newtonsoft.Json.xml
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\obj\Debug\Weiz.TaskManager.DBUtility.csprojResolveAssemblyReference.cache
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\obj\Debug\Weiz.TaskManager.DBUtility.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\obj\Debug\Weiz.TaskManager.DBUtility.pdb

@@ -53,7 +53,7 @@ namespace Weiz.TaskManager.TaskUtility
                         #region quartz 实例配置
                         //NameValueCollection properties = new NameValueCollection();
 
-                        //properties["quartz.scheduler.instanceName"] = "ExampleDefaultQuartzScheduler";
+                        //properties["quartz.scheduler.instanceName"] = "ExampleQuartzScheduler";
 
                         //properties["quartz.threadPool.type"] = "Quartz.Simpl.SimpleThreadPool, Quartz";
 
@@ -141,7 +141,7 @@ namespace Weiz.TaskManager.TaskUtility
             {
                 NameValueCollection properties = new NameValueCollection();
 
-                properties["quartz.scheduler.instanceName"] = "schedMaintenanceService";
+                properties["quartz.scheduler.instanceName"] = "ExampleQuartzScheduler";
 
                 properties["quartz.scheduler.proxy"] = "true";
 

@@ -16,3 +16,4 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Release\log4net.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Release\Newtonsoft.Json.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\obj\Release\Weiz.TaskManager.Common.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\obj\Release\Weiz.TaskManager.Common.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\obj\Release\Weiz.TaskManager.Common.csprojResolveAssemblyReference.cache

@@ -12,7 +12,6 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\System.Web.Webpages
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.BLL.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.Models.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.TaskUtility.dll
-E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.Utility.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.DAL.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Quartz.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\log4net.dll
@@ -22,7 +21,6 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Common.Logging.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.BLL.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.Models.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.TaskUtility.pdb
-E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.Utility.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\System.Web.Razor.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\System.Web.Webpages.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\System.Web.Webpages.Deployment.xml
@@ -35,3 +33,8 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Newtonsoft.Json.xml
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\obj\Debug\Weiz.TaskManager.HouTai_New.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\obj\Debug\Weiz.TaskManager.HouTai_New.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\obj\Debug\Weiz.TaskManager.HouTai_New.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.Common.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.DBUtility.dll
+E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.Common.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\Weiz.TaskManager.DBUtility.pdb
+E:\vs2012\TaskManager-master\Weiz.TaskManager.HouTai_New\bin\quartz.config
