@@ -22,7 +22,9 @@ namespace Weiz.TaskManager.TaskUtility
     /// </summary>
     public class QuartzHelper
     {
-        private QuartzHelper() { }
+        private QuartzHelper()
+        {
+        }
 
         private static object obj = new object();
 
@@ -38,7 +40,24 @@ namespace Weiz.TaskManager.TaskUtility
 
         private static IScheduler scheduler = null;
 
+        private static IList<TaskModel> _currentTaskList = null;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static IList<TaskModel> CurrentTaskList
+        {
+            set { }
+            get
+            {
+                if (_currentTaskList == null)
+                {
+                    _currentTaskList = TaskHelper.GetAllTaskList();
+                }
+                return _currentTaskList;
+            }
+        }
         /// <summary>
         /// 初始化任务调度对象
         /// </summary>
@@ -104,10 +123,9 @@ namespace Weiz.TaskManager.TaskUtility
                     //添加全局监听
                     scheduler.ListenerManager.AddTriggerListener(new CustomTriggerListener(), GroupMatcher<TriggerKey>.AnyGroup());
                     scheduler.Start();
-
                     ///获取所有执行中的任务
                     List<TaskModel> listTask = TaskHelper.GetAllTaskList().ToList<TaskModel>();
-
+                    _currentTaskList = listTask;
                     if (listTask != null && listTask.Count > 0)
                     {
                         foreach (TaskModel taskUtil in listTask)
@@ -157,6 +175,7 @@ namespace Weiz.TaskManager.TaskUtility
             }
         }
 
+
         /// <summary>
         /// 删除现有任务
         /// </summary>
@@ -195,6 +214,10 @@ namespace Weiz.TaskManager.TaskUtility
             //验证是否正确的Cron表达式
             if (ValidExpression(task.CronExpressionString))
             {
+                var typeName = task.AssemblyName + "." + task.ClassName;
+
+                var temp = Type.GetType(typeName,true,true);
+
                 IJobDetail job = new JobDetailImpl(task.TaskID.ToString(), GetClassInfo(task.AssemblyName, task.ClassName));
                 //添加任务执行参数
                 job.JobDataMap.Add("TaskParam", task.TaskParam);
@@ -345,12 +368,6 @@ namespace Weiz.TaskManager.TaskUtility
                 list.Add(TimeZoneInfo.ConvertTimeFromUtc(dtf.DateTime, TimeZoneInfo.Local));
             }
             return list;
-        }
-
-
-        public static object CurrentTaskList()
-        {
-            throw new NotImplementedException();
         }
 
         /// <summary>

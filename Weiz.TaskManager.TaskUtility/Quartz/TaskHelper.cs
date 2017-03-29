@@ -39,6 +39,7 @@ namespace Weiz.TaskManager.TaskUtility
             if (result)
             {
                 QuartzHelper.ScheduleJob(model, true);
+
             }
             return result;
         }
@@ -126,13 +127,6 @@ namespace Weiz.TaskManager.TaskUtility
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public static IList<TaskModel> CurrentTaskList()
-        {
-            return task.GetAllTaskList();
-        }
+
     }
 }

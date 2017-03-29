@@ -22,4 +22,16 @@
     <CreatedTime>2016-01-01 13:00:00</CreatedTime>
     <CronRemark>每20秒运行一次</CronRemark>
   </Task>
+
+  <Task>
+    <TaskID>36d5d2fb-2af9-4aa1-a3c9-e09b542abe48</TaskID>
+    <TaskName>自动增加Job</TaskName>
+    <TaskParam></TaskParam>
+    <CronExpressionString>0/10 * * * * ?</CronExpressionString>
+    <AssemblyName>Weiz.TaskManager.TaskSet</AssemblyName>
+    <ClassName>Weiz.TaskManager.TaskSet.AutoAddJob</ClassName>
+    <Status>1</Status>
+    <CreatedTime>2016-01-01 13:00:00</CreatedTime>
+    <CronRemark>每10秒运行一次，将后台添加的job 增加到quartz 服务中,请勿删除 </CronRemark>
+  </Task>
 </Tasks>

@@ -10,3 +10,15 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Newtonsoft.Jso
 E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\obj\Debug\Weiz.TaskManager.DBUtility.csprojResolveAssemblyReference.cache
 E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\obj\Debug\Weiz.TaskManager.DBUtility.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.DBUtility\obj\Debug\Weiz.TaskManager.DBUtility.pdb
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\log4net.config
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Weiz.TaskManager.DBUtility.dll
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Weiz.TaskManager.DBUtility.pdb
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Weiz.TaskManager.Common.dll
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\log4net.dll
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Newtonsoft.Json.dll
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Weiz.TaskManager.Common.pdb
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\log4net.xml
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\bin\Debug\Newtonsoft.Json.xml
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\obj\Debug\Weiz.TaskManager.DBUtility.csprojResolveAssemblyReference.cache
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\obj\Debug\Weiz.TaskManager.DBUtility.dll
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\obj\Debug\Weiz.TaskManager.DBUtility.pdb

@@ -17,3 +17,13 @@ E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\bin\Release\Newtonsoft.Json
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\obj\Release\Weiz.TaskManager.Common.dll
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\obj\Release\Weiz.TaskManager.Common.pdb
 E:\vs2012\TaskManager-master\Weiz.TaskManager.Common\obj\Release\Weiz.TaskManager.Common.csprojResolveAssemblyReference.cache
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\bin\Release\log4net.config
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\bin\Release\Weiz.TaskManager.Common.dll
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\bin\Release\Weiz.TaskManager.Common.pdb
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\bin\Release\log4net.dll
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\bin\Release\Newtonsoft.Json.dll
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\bin\Release\log4net.xml
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\bin\Release\Newtonsoft.Json.xml
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\obj\Release\Weiz.TaskManager.Common.csprojResolveAssemblyReference.cache
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\obj\Release\Weiz.TaskManager.Common.dll
+D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\obj\Release\Weiz.TaskManager.Common.pdb
