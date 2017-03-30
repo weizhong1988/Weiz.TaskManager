@@ -36,11 +36,6 @@ namespace Weiz.TaskManager.TaskUtility
                 result = task.Add(model);
             }
 
-            if (result)
-            {
-                QuartzHelper.ScheduleJob(model, true);
-
-            }
             return result;
         }
 
