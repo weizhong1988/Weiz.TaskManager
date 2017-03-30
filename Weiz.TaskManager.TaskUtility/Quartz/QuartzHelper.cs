@@ -214,10 +214,6 @@ namespace Weiz.TaskManager.TaskUtility
             //验证是否正确的Cron表达式
             if (ValidExpression(task.CronExpressionString))
             {
-                var typeName = task.AssemblyName + "." + task.ClassName;
-
-                var temp = Type.GetType(typeName,true,true);
-
                 IJobDetail job = new JobDetailImpl(task.TaskID.ToString(), GetClassInfo(task.AssemblyName, task.ClassName));
                 //添加任务执行参数
                 job.JobDataMap.Add("TaskParam", task.TaskParam);

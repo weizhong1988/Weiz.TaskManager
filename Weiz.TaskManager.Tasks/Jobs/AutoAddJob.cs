@@ -6,7 +6,7 @@ using Weiz.TaskManager.Common;
 using Weiz.TaskManager.Models;
 using Weiz.TaskManager.TaskUtility;
 
-namespace Weiz.TaskManager.TaskSet.Jobs
+namespace Weiz.TaskManager.TaskSet
 {
 
     /// <summary>
