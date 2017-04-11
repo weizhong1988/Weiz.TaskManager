@@ -20,7 +20,7 @@ namespace Weiz.TaskManager.ServiceBus
                     s.WhenStarted(tc => tc.Start());
                     s.WhenStopped(tc => tc.Stop());
                 });
-                x.RunAsPrompt();
+                x.RunAsLocalSystem();
 
                 x.SetDescription("TaskManagerServiceBus Host");
                 x.SetDisplayName("TaskManagerServiceBus");

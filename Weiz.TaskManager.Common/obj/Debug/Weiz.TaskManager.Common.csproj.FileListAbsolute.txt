@@ -16,3 +16,12 @@ D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Commo
 D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\bin\Debug\Newtonsoft.Json.xml
 D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\obj\Debug\Weiz.TaskManager.Common.dll
 D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Common\obj\Debug\Weiz.TaskManager.Common.pdb
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Common\bin\Debug\log4net.config
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Common\bin\Debug\Weiz.TaskManager.Common.dll
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Common\bin\Debug\Weiz.TaskManager.Common.pdb
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Common\bin\Debug\log4net.dll
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Common\bin\Debug\Newtonsoft.Json.dll
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Common\bin\Debug\log4net.xml
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Common\bin\Debug\Newtonsoft.Json.xml
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Common\obj\Debug\Weiz.TaskManager.Common.dll
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Common\obj\Debug\Weiz.TaskManager.Common.pdb

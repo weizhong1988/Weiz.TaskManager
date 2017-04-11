@@ -9,3 +9,9 @@ D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Model
 D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Models\bin\Release\Weiz.TaskManager.Models.pdb
 D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Models\obj\Release\Weiz.TaskManager.Models.dll
 D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.Models\obj\Release\Weiz.TaskManager.Models.pdb
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Models\bin\Release\Weiz.TaskManager.Models.dll.config
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Models\bin\Release\Weiz.TaskManager.Models.dll
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Models\bin\Release\Weiz.TaskManager.Models.pdb
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Models\obj\Release\Weiz.TaskManager.Models.csprojResolveAssemblyReference.cache
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Models\obj\Release\Weiz.TaskManager.Models.dll
+D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.Models\obj\Release\Weiz.TaskManager.Models.pdb
