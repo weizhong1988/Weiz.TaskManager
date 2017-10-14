@@ -25,21 +25,17 @@ namespace Weiz.TaskManager.TaskSet
         /// <param name="context"></param>
         public void Execute(IJobExecutionContext context)
         {
-            base.ExecuteJob(context, () =>
+            try
             {
-                try
-                {
-                    var tastName = context.Trigger.Description;
-                    // 3. 开始执行相关任务
-                    LogHelper.WriteLog(tastName + ",当前系统时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                    Thread.Sleep(9000);
-                }
-                catch (Exception ex)
-                {
-                    LogHelper.WriteLog(context.Trigger.Description, ex);
-                }
-
-            });
+                var tastName = context.Trigger.Description;
+                // 3. 开始执行相关任务
+                LogHelper.WriteLog(tastName + ",当前系统时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                Thread.Sleep(9000);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.WriteLog(context.Trigger.Description, ex);
+            }
         }
     }
 }

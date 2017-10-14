@@ -35,7 +35,6 @@ namespace Weiz.TaskManager.TaskUtility
                 model.TaskID = Guid.NewGuid();
                 result = task.Add(model);
             }
-
             return result;
         }
 
@@ -45,7 +44,7 @@ namespace Weiz.TaskManager.TaskUtility
         /// <param name="TaskID">任务id</param>
         public static void DeleteById(string taskId)
         {
-            QuartzHelper.DeleteJob(taskId);
+            //QuartzHelper.DeleteJob(taskId);
 
             task.DeleteById(taskId);
         }
@@ -57,14 +56,14 @@ namespace Weiz.TaskManager.TaskUtility
         /// <param name="Status">任务状态</param>
         public static void UpdateTaskStatus(string taskId, TaskStatus Status)
         {
-            if (Status == TaskStatus.RUN)
-            {
-                QuartzHelper.ResumeJob(taskId);
-            }
-            else
-            {
-                QuartzHelper.PauseJob(taskId);
-            }
+            //if (Status == TaskStatus.RUN)
+            //{
+            //    QuartzHelper.ResumeJob(taskId);
+            //}
+            //else
+            //{
+            //    QuartzHelper.PauseJob(taskId);
+            //}
             task.UpdateTaskStatus(taskId, (int)Status);
         }
 

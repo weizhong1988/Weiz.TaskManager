@@ -22,15 +22,3 @@ D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUti
 D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\obj\Release\Weiz.TaskManager.DBUtility.csprojResolveAssemblyReference.cache
 D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\obj\Release\Weiz.TaskManager.DBUtility.dll
 D:\vs2015\Weiz.TaskManager-master\Weiz.TaskManager-master\Weiz.TaskManager.DBUtility\obj\Release\Weiz.TaskManager.DBUtility.pdb
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\bin\Release\log4net.config
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\bin\Release\Weiz.TaskManager.DBUtility.dll
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\bin\Release\Weiz.TaskManager.DBUtility.pdb
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\bin\Release\Weiz.TaskManager.Common.dll
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\bin\Release\log4net.dll
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\bin\Release\Newtonsoft.Json.dll
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\bin\Release\Weiz.TaskManager.Common.pdb
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\bin\Release\log4net.xml
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\bin\Release\Newtonsoft.Json.xml
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\obj\Release\Weiz.TaskManager.DBUtility.csprojResolveAssemblyReference.cache
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\obj\Release\Weiz.TaskManager.DBUtility.dll
-D:\vs2015\Weiz.TaskManager-git\Weiz.TaskManager.DBUtility\obj\Release\Weiz.TaskManager.DBUtility.pdb
